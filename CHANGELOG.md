@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.37.2] - 2026-07-16
+
+- Añadidos nuevos iconos a la aplicación.
+
 ## [1.37.0] - 2026-07-16
 
 - Mejoras en generación de CHANGELOG público.

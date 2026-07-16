@@ -33,7 +33,7 @@ minúscula basada en `distroless`.
   eliminar, prune de ReplicaSets, suspender/disparar CronJobs, editar Secrets, rollback y
   desinstalación de releases de Helm, etc.
 - **Port forwarding integrado** con proxy HTTP hacia el puerto reenviado.
-- **Editor de manifiestos YAML en vivo** para cualquier recurso del cluster (incl. CRDs),
+- **Editor de manifiestos YAML en tiempo real** para cualquier recurso del cluster (incl. CRDs),
   con control de concurrencia optimista (`resourceVersion`).
 - **Logs en tiempo real** vía WebSocket (por pod o agregados de un workload completo).
 - **Terminal interactivo** (`kubectl exec`) contra el contenedor de cada pod.
