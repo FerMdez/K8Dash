@@ -52,10 +52,22 @@ rules:
   - apiGroups: [""]
     resources: ["secrets"]
     verbs: ["create", "update"]
+  # Registro compartido de sesiones de port-forward (ConfigMap k8dash-portforward)
+  # para que TODAS las réplicas del dashboard vean y puedan eliminar las mismas
+  # sesiones. Sin estos permisos, el port-forward sigue funcionando en despliegues
+  # de una sola instancia, pero el listado no se comparte entre réplicas.
+  - apiGroups: [""]
+    resources: ["configmaps"]
+    verbs: ["create", "update"]
   # Terminal interactivo contra el contenedor de un pod (subrecurso pods/exec).
   # El API server exige el verbo "create" sobre pods/exec para abrir la sesión.
   - apiGroups: [""]
     resources: ["pods/exec"]
+    verbs: ["create", "get"]
+  # Reenvío de puertos hacia un pod (subrecurso pods/portforward). El API server
+  # exige el verbo "create" sobre pods/portforward para abrir el túnel SPDY.
+  - apiGroups: [""]
+    resources: ["pods/portforward"]
     verbs: ["create", "get"]
   # Workloads (apps).
   - apiGroups: ["apps"]

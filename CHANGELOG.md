@@ -9,6 +9,11 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.39.0] - 2026-07-16
+
+- Corrección de errores en formato de código.
+- Solución para que Port-forward stateless (funcione con N réplicas).
+
 ## [1.37.6] - 2026-07-16
 
 - Mejora en diseño en iconos de Configuración.
