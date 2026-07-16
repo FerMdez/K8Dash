@@ -1,0 +1,255 @@
+# Despliegue completo de K8Dash dentro de un cluster de Kubernetes.
+#
+# Aplica con:  kubectl apply -f deploy/kubernetes.yaml
+# Accede con:  kubectl -n k8dash port-forward svc/k8dash 8080:80
+#
+# El dashboard usa la configuración in-cluster automáticamente (no necesita
+# KUBECONFIG cuando corre dentro de un pod gracias al ServiceAccount montado).
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: k8dash
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: k8dash
+  namespace: k8dash
+---
+# Rol de cluster con los permisos necesarios para el dashboard.
+# Lectura amplia + acciones puntuales (scale, restart, delete de pods/deployments).
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: k8dash
+rules:
+  # Recursos core (solo lectura).
+  - apiGroups: [""]
+    resources:
+      - nodes
+      - namespaces
+      - pods
+      - pods/log
+      - services
+      - endpoints
+      - configmaps
+      - secrets
+      - serviceaccounts
+      - persistentvolumes
+      - persistentvolumeclaims
+      - events
+    verbs: ["get", "list", "watch"]
+  # Eliminación de pods (acción del dashboard).
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["delete"]
+  # Gestión del Secret de configuración de autenticación del dashboard
+  # (k8dash-auth). Permite crear/actualizar la config de login opcional (usuario
+  # y contraseña u OIDC) y que persista entre reinicios del pod. Sin estos
+  # permisos, la autenticación no podrá guardarse (la app seguirá funcionando
+  # sin autenticación).
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["create", "update"]
+  # Terminal interactivo contra el contenedor de un pod (subrecurso pods/exec).
+  # El API server exige el verbo "create" sobre pods/exec para abrir la sesión.
+  - apiGroups: [""]
+    resources: ["pods/exec"]
+    verbs: ["create", "get"]
+  # Workloads (apps).
+  - apiGroups: ["apps"]
+    resources:
+      - deployments
+      - statefulsets
+      - daemonsets
+      - replicasets
+    verbs: ["get", "list", "watch"]
+  # Escalado, reinicio y borrado de workloads de apps.
+  - apiGroups: ["apps"]
+    resources:
+      - deployments
+      - deployments/scale
+      - statefulsets
+      - statefulsets/scale
+      - daemonsets
+      - replicasets
+      - replicasets/scale
+    verbs: ["update", "patch", "delete"]
+  # Batch.
+  - apiGroups: ["batch"]
+    resources: ["jobs", "cronjobs"]
+    verbs: ["get", "list", "watch"]
+  # Acciones sobre batch: suspender/reanudar cronjobs, lanzar jobs manuales, borrar.
+  - apiGroups: ["batch"]
+    resources: ["jobs"]
+    verbs: ["create", "delete"]
+  - apiGroups: ["batch"]
+    resources: ["cronjobs"]
+    verbs: ["update", "patch", "delete"]
+  # Pod Disruption Budgets (policy).
+  - apiGroups: ["policy"]
+    resources: ["poddisruptionbudgets"]
+    verbs: ["get", "list", "watch"]
+  # Borrado de Pod Disruption Budgets (acción del dashboard).
+  - apiGroups: ["policy"]
+    resources: ["poddisruptionbudgets"]
+    verbs: ["delete"]
+  # Red.
+  - apiGroups: ["networking.k8s.io"]
+    resources: ["ingresses"]
+    verbs: ["get", "list", "watch"]
+  # Almacenamiento.
+  - apiGroups: ["storage.k8s.io"]
+    resources: ["storageclasses"]
+    verbs: ["get", "list", "watch"]
+  # Métricas (metrics-server).
+  - apiGroups: ["metrics.k8s.io"]
+    resources: ["nodes", "pods"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: k8dash
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: k8dash
+subjects:
+  - kind: ServiceAccount
+    name: k8dash
+    namespace: k8dash
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8dash
+  namespace: k8dash
+  labels:
+    app: k8dash
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8dash
+  template:
+    metadata:
+      labels:
+        app: k8dash
+    spec:
+      serviceAccountName: k8dash
+      securityContext:
+        runAsNonRoot: true
+        # UID/GID numérico del usuario "nonroot" de las imágenes distroless.
+        # Necesario para que Kubernetes pueda verificar que no es root.
+        runAsUser: 65532
+        runAsGroup: 65532
+        fsGroup: 65532
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: k8dash
+          image: fermdez96/k8dash:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              name: http
+          env:
+            - name: K8DASH_ADDR
+              value: ":8080"
+            # Namespace donde persistir la configuración de autenticación
+            # (Secret k8dash-auth). Se autodetecta del ServiceAccount, pero lo
+            # fijamos explícitamente vía la Downward API por claridad.
+            - name: K8DASH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          livenessProbe:
+            httpGet:
+              # Endpoint de health público: responde 200 aunque la
+              # autenticación esté activa (no requiere sesión).
+              path: /healthz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 3
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8dash
+  namespace: k8dash
+  labels:
+    app: k8dash
+spec:
+  selector:
+    app: k8dash
+  ports:
+    - port: 80
+      targetPort: http
+      name: http
+  type: ClusterIP
+---
+# Ingress de ejemplo para exponer el dashboard con TLS y WebSockets.
+#
+# IMPORTANTE: el streaming de logs/eventos y el terminal interactivo usan
+# WebSockets (rutas /api/ws/...).
+# Si el proxy/Ingress no propaga el "Upgrade" o cierra conexiones ociosas,
+# verás en el navegador: "WebSocket connection failed".
+#
+# Las anotaciones de abajo son para ingress-nginx. Para Traefik usa en su lugar
+# un Middleware o las opciones del IngressRoute (Traefik soporta WebSocket de
+# forma nativa, pero hay que subir los timeouts de respuesta/lectura).
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8dash
+  namespace: k8dash
+  annotations:
+    # --- ingress-nginx ---
+    # Timeouts largos para que el proxy no corte el stream de logs/eventos.
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    # Buffering desactivado para que los logs lleguen en tiempo real.
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    # Forzar HTTP/1.1 (necesario para el upgrade de WebSocket).
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+    # --- cert-manager (opcional, si gestionas TLS automáticamente) ---
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - dashboard.example.com
+      secretName: k8dash-tls
+  rules:
+    - host: dashboard.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: k8dash
+                port:
+                  number: 80

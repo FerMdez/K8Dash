@@ -1,0 +1,17 @@
+# .dockerignore del repositorio PÚBLICO de K8Dash.
+#
+# Solo necesitamos el binario "k8dash" en el contexto de build. Excluimos el
+# resto para minimizar el contexto enviado al daemon/kaniko.
+
+# Control de versiones
+.git
+.gitignore
+
+# Documentación y manifiestos (no necesarios en la imagen)
+README.md
+CHANGELOG.md
+deploy/
+*.md
+
+# El propio Dockerfile
+Dockerfile
