@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.37.5] - 2026-07-16
+
+- Mejora en sección de Información con indicaciones de cómo actualizar según tipo de despliegue, plataforma y arquitectura.
+
 ## [1.37.4] - 2026-07-16
 
 - Mejora en estilo de enlaces de sección de Información.
