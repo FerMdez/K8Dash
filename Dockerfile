@@ -2,11 +2,6 @@
 # Dockerfile del repositorio PÚBLICO de K8Dash
 # ===============================================================================
 #
-# El binario se genera con:
-#     CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -trimpath -o k8dash .
-# lo que produce un ejecutable estático (sin dependencias de libc) apto para
-# imágenes distroless/scratch.
-#
 # Construir localmente (usa el binario genérico "k8dash"):
 #     docker build -t fermdez96/k8dash:latest .
 #

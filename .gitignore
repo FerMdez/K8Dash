@@ -1,6 +1,6 @@
 # .gitignore del repositorio PÚBLICO de K8Dash.
 #
-# El repositorio público NO contiene código fuente Go: solo el binario
+# El repositorio público NO contiene código fuente: solo el binario
 # precompilado, el Dockerfile, el manifiesto de Kubernetes y la documentación.
 
 # Configuración de Kubernetes (¡nunca commitear credenciales!)

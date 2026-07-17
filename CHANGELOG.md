@@ -9,6 +9,16 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.40.3] - 2026-07-17
+
+- Mejora en animación de cambio de tema, para adoptar compatibilidad con más navegadores y sistemas.
+
+## [1.40.2] - 2026-07-17
+
+- Actualizada documentación interna de la aplicación.
+- Actualizada documentación interna de la aplicación.
+- Añadida opción para eliminar: Services, Ingresses, Gateways, Endpoints, ConfigMaps, Secrets, HPA (Autoscalers), Pod Disruption Budgets, Volúmenes (PV), Claims (PVC) y Service Accounts.
+
 ## [1.40.1] - 2026-07-17
 
 - Añadidos iconos a notificaciones internas de la aplicación.
