@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.40.0] - 2026-07-17
+
+- Mejora en el sistema de notificaciones de la aplicación. * Nuevas pancartas de notificaciones nativas en la propia interfaz. * Nueva configuración propia para este tipo de notificaciones, independiente de las notificaciones PUSH. * Notificaciones interactivas con filtros de acción.
+
 ## [1.39.1] - 2026-07-17
 
 - Eliminar fichero innecesario.
