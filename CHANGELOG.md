@@ -9,6 +9,11 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.39.1] - 2026-07-17
+
+- Eliminar fichero innecesario.
+- Corrección para poder detener una sesión de reenvío de puertos, correctamente.
+
 ## [1.39.0] - 2026-07-16
 
 - Corrección de errores en formato de código.
