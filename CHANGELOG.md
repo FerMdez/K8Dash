@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.41.1] - 2026-07-18
+
+- Añadidos iconos RBAC.
+
+## [1.41.0] - 2026-07-18
+
+- Añadidas nuevas secciones de RBAC en apartado de Acceso: Roles, Role Bindings, Cluster Roles y Cluster Role Bindings.
+
 ## [1.40.3] - 2026-07-17
 
 - Mejora en animación de cambio de tema, para adoptar compatibilidad con más navegadores y sistemas.

@@ -115,6 +115,23 @@ rules:
   - apiGroups: ["storage.k8s.io"]
     resources: ["storageclasses"]
     verbs: ["get", "list", "watch"]
+  # RBAC / Acceso (rbac.authorization.k8s.io): roles, role bindings,
+  # cluster roles y cluster role bindings (solo lectura).
+  - apiGroups: ["rbac.authorization.k8s.io"]
+    resources:
+      - roles
+      - rolebindings
+      - clusterroles
+      - clusterrolebindings
+    verbs: ["get", "list", "watch"]
+  # Borrado de recursos RBAC (acción del dashboard).
+  - apiGroups: ["rbac.authorization.k8s.io"]
+    resources:
+      - roles
+      - rolebindings
+      - clusterroles
+      - clusterrolebindings
+    verbs: ["delete"]
   # Métricas (metrics-server).
   - apiGroups: ["metrics.k8s.io"]
     resources: ["nodes", "pods"]
