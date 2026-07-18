@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.41.2] - 2026-07-18
+
+- Mejorados iconos RBAC.
+
 ## [1.41.1] - 2026-07-18
 
 - Añadidos iconos RBAC.
