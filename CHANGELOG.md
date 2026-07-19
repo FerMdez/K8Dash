@@ -9,6 +9,30 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.42.5] - 2026-07-19
+
+- Mejoras específicas para navegadores en iOS.
+
+## [1.42.4] - 2026-07-19
+
+- Mejoras en supresión de predicciones de teclado en smartphones.
+
+## [1.42.3] - 2026-07-19
+
+- Eliminar autoespaciado tras inserción de '-' o '.' en terminal para smartphones.
+
+## [1.42.2] - 2026-07-19
+
+- Mejoras en corrección de funcionalidades predeterminadas en teclados de pantallas táctiles.
+
+## [1.42.1] - 2026-07-19
+
+- Mejoras en corrección de funcionalidades predeterminadas en teclados de pantallas táctiles.
+
+## [1.42.0] - 2026-07-19
+
+- Anuladas funciones predeterminadas de los teclados táctiles para mejora en interacción con terminal: * Anulada función de primera letra de párrafo en mayúscula. * Anulada autocorrección de palabras. * Anulado autocompletado de palabras.
+
 ## [1.41.2] - 2026-07-18
 
 - Mejorados iconos RBAC.
