@@ -9,6 +9,21 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.43.2] - 2026-07-20
+
+- Mejoras en animación de cambio de tema claro/oscuro.
+
+## [1.43.1] - 2026-07-20
+
+- Corrección de errores en animación de cambio de tema claro/oscuro.
+
+## [1.43.0] - 2026-07-20
+
+- Ajuste de formato de ficheros.
+- Añadidos nuevos test para CI/CD.
+- Optimización de código, compresión de respuesta y mejora del rendimiento general del dashboard.
+- Optimización de código, compresión de respuesta y mejora del rendimiento general del dashboard.
+
 ## [1.42.5] - 2026-07-19
 
 - Mejoras específicas para navegadores en iOS.
