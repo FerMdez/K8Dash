@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.43.5] - 2026-07-22
+
+- Corrección de error visual en detalles de puntos de tendencia.
+
 ## [1.43.4] - 2026-07-21
 
 - Mejoras en animación de cambio de tema claro/oscuro en Android.
