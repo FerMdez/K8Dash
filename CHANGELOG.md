@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.43.7] - 2026-07-24
+
+- Se ha implementado el buscador y el resaltado de sintaxis YAML en las pestañas 'Valores' y 'Manifiesto' del detalle de una release de Helm.
+
 ## [1.43.6] - 2026-07-23
 
 - Mejoras en editor de manifiestos YAML para destacar sintaxis.
