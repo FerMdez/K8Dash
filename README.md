@@ -114,6 +114,76 @@ docker build --build-arg BIN=k8dash-arm64 -t k8dash:arm64 .
 
 ---
 
+## 🔐 Verificar la integridad del binario (checksum)
+
+Cada release publica un fichero [`SHA256SUMS.txt`](SHA256SUMS.txt) con la suma de
+comprobación **SHA-256** de los tres binarios (`k8dash`, `k8dash-amd64` y
+`k8dash-arm64`). Está disponible tanto en la raíz de este repositorio como entre
+los *assets* de cada [GitHub Release](https://github.com/FerMdez/K8Dash/releases).
+Verificarlo tras la descarga garantiza que el binario **no ha sido alterado**.
+
+El contenido tiene el formato estándar de `sha256sum` (una línea por binario):
+
+```text
+<hash>  k8dash
+<hash>  k8dash-amd64
+<hash>  k8dash-arm64
+```
+
+Descarga el binario que necesites **y** el fichero `SHA256SUMS.txt` en el mismo
+directorio, y a continuación compara la suma según tu sistema operativo.
+
+### 🐧 Linux
+
+`sha256sum` viene incluido en `coreutils`. Verifica todas las sumas del fichero:
+
+```bash
+# Verifica solo las entradas cuyos ficheros estén presentes en el directorio
+sha256sum --ignore-missing -c SHA256SUMS.txt
+# Salida esperada:  k8dash-amd64: OK
+```
+
+O calcula el hash de un binario concreto y compáralo manualmente:
+
+```bash
+sha256sum k8dash-amd64
+```
+
+### 🍏 macOS
+
+macOS no trae `sha256sum`, pero sí `shasum` (con el algoritmo `-a 256`):
+
+```bash
+# Verifica contra el fichero de sumas
+shasum -a 256 --ignore-missing -c SHA256SUMS.txt
+
+# O calcula el hash de un binario concreto
+shasum -a 256 k8dash-amd64
+```
+
+> Alternativamente: `openssl dgst -sha256 k8dash-amd64`.
+
+### 🪟 Windows (PowerShell)
+
+Usa el cmdlet `Get-FileHash` y compara el resultado con la línea correspondiente
+de `SHA256SUMS.txt`:
+
+```powershell
+# Calcula el SHA-256 del binario
+Get-FileHash .\k8dash-amd64 -Algorithm SHA256
+
+# Comparación automática frente al valor esperado del fichero de sumas.
+# Sustituye el nombre del binario según el que hayas descargado:
+$file = 'k8dash-amd64'
+$expected = (Select-String -Path .\SHA256SUMS.txt -Pattern "\s$file$").Line.Split(' ')[0]
+$actual   = (Get-FileHash .\$file -Algorithm SHA256).Hash.ToLower()
+if ($actual -eq $expected) { "OK: $file coincide" } else { "ERROR: $file NO coincide" }
+```
+
+Si el resultado no coincide, **no ejecutes el binario**: vuelve a descargarlo.
+
+---
+
 ## ☸️ Despliegue dentro del cluster
 
 El manifiesto [`deploy/kubernetes.yaml`](deploy/kubernetes.yaml) crea un `Namespace`,
