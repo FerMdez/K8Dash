@@ -9,6 +9,18 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.44.2] - 2026-07-27
+
+- Eliminar caracteres Unicode ambiguos de la Wiki.
+- Mejoras en CI/CD al publicar Wiki del proyecto.
+- Mejoras en CI/CD al publicar Wiki del proyecto.
+- Añadida Wiki del proyecto.
+- Añadida función de búsqueda en logs de contenedor.
+
+## [1.44.1] - 2026-07-27
+
+- Solución de error que no permitía escribir mayúsculas intencionales en termianl de un contenedor.
+
 ## [1.44.0] - 2026-07-24
 
 - Mejora en lógica de la aplicación para reanudar el autorefresco, una vez se haya cerrado la vista de detalles de un workload, tras pausa en segundo plano.
