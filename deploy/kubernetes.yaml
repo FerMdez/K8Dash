@@ -194,6 +194,67 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
+
+            # ================================================================
+            # Endurecimiento de seguridad (OPCIONAL)
+            # ----------------------------------------------------------------
+            # Ninguna de estas variables es obligatoria: sin ellas, K8Dash se
+            # comporta igual que en versiones anteriores. Descoméntalas y
+            # ajústalas al exponer el dashboard en producción.
+            # Documentación: https://github.com/FerMdez/K8Dash/wiki/Seguridad
+            # ================================================================
+
+            # --- CORS: qué otros dominios pueden llamar a la API ---
+            # Por defecto se permite cualquier origen ("*"). En producción,
+            # restríngelo al dominio real del dashboard.
+            # - name: K8DASH_CORS_ORIGINS
+            #   value: "https://dashboard.example.com"
+            # - name: K8DASH_CORS_METHODS
+            #   value: "GET, POST, PUT, DELETE, OPTIONS"
+            # - name: K8DASH_CORS_HEADERS
+            #   value: "Content-Type, Authorization"
+
+            # --- Proxies de confianza ---
+            # Redes cuyas cabeceras X-Forwarded-For/-Proto/-Host se aceptan. Por
+            # defecto ya se confía en loopback y en las redes privadas (donde
+            # vive el Ingress), así que normalmente NO hace falta tocarlo.
+            # Indícalo si quieres restringirlo a la red exacta de tu Ingress.
+            # - name: K8DASH_TRUSTED_PROXIES
+            #   value: "10.42.0.0/16"
+
+            # --- Protección anti-CSRF ---
+            # "auto" (por defecto): se exige solo a peticiones de navegador, de
+            # modo que los clientes programáticos siguen funcionando igual.
+            # "on": se exige siempre.  "off": desactivada.
+            # - name: K8DASH_CSRF
+            #   value: "on"
+
+            # --- Duración de la sesión ---
+            # Por defecto 12h con renovación automática mientras se usa el
+            # dashboard. "0" = sin expiración (comportamiento anterior).
+            # - name: K8DASH_SESSION_TTL
+            #   value: "8h"
+
+            # --- Token de configuración inicial ---
+            # Si se define, activar la autenticación por primera vez exige este
+            # token, blindando la ventana en la que aún no hay login. Créalo con:
+            #   kubectl -n k8dash create secret generic k8dash-bootstrap \
+            #     --from-literal=setupToken="$(openssl rand -hex 24)"
+            # - name: K8DASH_SETUP_TOKEN
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: k8dash-bootstrap
+            #       key: setupToken
+
+            # --- Cabeceras de seguridad ---
+            # Ya se emiten valores seguros por defecto (CSP estricta,
+            # X-Frame-Options: DENY, nosniff, HSTS bajo HTTPS...). Solo hace
+            # falta tocarlas para relajarlas, p. ej. para incrustar el dashboard
+            # en un iframe de tu portal interno.
+            # - name: K8DASH_FRAME_OPTIONS
+            #   value: "SAMEORIGIN"
+            # - name: K8DASH_CSP
+            #   value: "default-src 'self'; frame-ancestors 'self'"
           resources:
             requests:
               cpu: 50m

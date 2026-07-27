@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.46.0] - 2026-07-27
+
+- Mejoras e implementaciones de seguridad. > Estas mejoras afectan principalmente a instancias expuestas en internet.
+
+## [1.45.2] - 2026-07-27
+
+- Ajuste de interfaz de usuario para coincidir color de detalle de sección de 'Namespaces' con color de énfasis del usuario.
+
 ## [1.45.1] - 2026-07-27
 
 - Mejoras y solución de errores con caché de navegador.

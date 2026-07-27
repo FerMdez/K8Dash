@@ -81,12 +81,50 @@ docker run --rm -p 8080:8080 \
 
 ### Variables de entorno
 
+#### Generales
+
 | Variable      | Por defecto | Descripción                                            |
 |---------------|-------------|--------------------------------------------------------|
 | `KUBECONFIG`  | —           | Ruta(s) al kubeconfig. Admite varias separadas por `:` (Linux). |
 | `K8DASH_ADDR` | `:8080`     | Dirección y puerto de escucha del servidor HTTP.       |
 | `K8DASH_NAMESPACE` | *(autodetectado)* | Namespace donde persistir el Secret `k8dash-auth` de la autenticación. In-cluster se detecta del ServiceAccount. |
 | `K8DASH_AUTH_DISABLED` | `false` | Si es `true`/`1`, **desactiva la autenticación** ignorando la configuración persistida. Mecanismo de recuperación si el admin queda bloqueado. |
+
+#### Seguridad (CORS, cabeceras, CSRF y sesión)
+
+| Variable | Por defecto | Descripción |
+|----------|-------------|-------------|
+| `K8DASH_CORS_ORIGINS` | `*` | Orígenes permitidos (`Access-Control-Allow-Origin`). Acepta `*` o una lista separada por comas. **En producción, restríngelo a tu dominio.** |
+| `K8DASH_CORS_METHODS` | `GET, POST, PUT, DELETE, OPTIONS` | Métodos permitidos (`Access-Control-Allow-Methods`). |
+| `K8DASH_CORS_HEADERS` | `Content-Type, Authorization` | Cabeceras permitidas (`Access-Control-Allow-Headers`). |
+| `K8DASH_CORS_CREDENTIALS` | `false` | Añade `Access-Control-Allow-Credentials: true` (requiere lista explícita de orígenes). |
+| `K8DASH_CORS_MAX_AGE` | — | Segundos de caché del *preflight*. |
+| `K8DASH_CSP` | *(política estricta)* | `Content-Security-Policy`. `off` para desactivarla. |
+| `K8DASH_FRAME_OPTIONS` | `DENY` | `X-Frame-Options` (anti-clickjacking). |
+| `K8DASH_HSTS` | `max-age=31536000; includeSubDomains` | `Strict-Transport-Security` (solo se emite bajo HTTPS). |
+| `K8DASH_REFERRER_POLICY` | `same-origin` | `Referrer-Policy`. |
+| `K8DASH_PERMISSIONS_POLICY` | *(cámara/micro/geo off)* | `Permissions-Policy`. |
+| `K8DASH_TRUSTED_PROXIES` | *(loopback + redes privadas)* | Redes cuyas cabeceras `X-Forwarded-*` se aceptan. Admite `all`, `none` o una lista de CIDR/IP. |
+| `K8DASH_CSRF` | `auto` | Protección anti-CSRF: `auto` (solo navegadores), `on` (siempre) u `off`. |
+| `K8DASH_SESSION_TTL` | `12h` | Duración de la sesión con renovación automática. `0` = sin expiración. |
+| `K8DASH_SETUP_TOKEN` | — | Si se define, la primera configuración de la autenticación exige este token. |
+| `K8DASH_OIDC_ALLOW_INSECURE_ISSUER` | `false` | Permite un *issuer* OIDC sin TLS. No recomendado. |
+| `K8DASH_OIDC_SKIP_SIGNATURE_VERIFY` | `false` | Desactiva la verificación de la firma del `id_token`. No recomendado. |
+
+> `X-Content-Type-Options: nosniff` se envía siempre. Los valores por defecto reproducen el
+> comportamiento de versiones anteriores donde ello no supone un riesgo directo, de modo que
+> una instalación existente **sigue funcionando igual tras actualizar**.
+
+**Ejemplo recomendado para producción tras un Ingress con TLS:**
+
+```bash
+K8DASH_CORS_ORIGINS="https://dashboard.example.com"
+K8DASH_TRUSTED_PROXIES="10.42.0.0/16"   # la red de tu Ingress
+K8DASH_CSRF=on
+K8DASH_SESSION_TTL=8h
+```
+
+📘 Documentación detallada en la [wiki: Seguridad](https://github.com/FerMdez/K8Dash/wiki/Seguridad).
 
 ---
 
