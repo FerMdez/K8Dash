@@ -9,6 +9,15 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.45.1] - 2026-07-27
+
+- Mejoras y solución de errores con caché de navegador.
+
+## [1.45.0] - 2026-07-27
+
+- Añadida subsección de 'Ingresses Classes', en sección de 'Red'.
+- Corregida información de Wiki.
+
 ## [1.44.2] - 2026-07-27
 
 - Eliminar caracteres Unicode ambiguos de la Wiki.
