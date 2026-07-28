@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.47.0] - 2026-07-28
+
+- Rediseño y mejora de terminal virtual en teclados virtuales y pantallas táctiles.
+
 ## [1.46.0] - 2026-07-27
 
 - Mejoras e implementaciones de seguridad. > Estas mejoras afectan principalmente a instancias expuestas en internet.
