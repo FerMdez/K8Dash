@@ -9,9 +9,71 @@ minúscula basada en `distroless`.
 
 ![Docker](https://img.shields.io/badge/Docker-fermdez96%2Fk8dash-2496ED?logo=docker&logoColor=white)
 ![License](https://shields.io/badge/license-CC--BY--NC--SA-green)
+[![Docs](https://img.shields.io/badge/📚%20Docs-k8dash.fermdez.net-4C8BF5)](https://k8dash.fermdez.net/docs/es/)
 
 > [!NOTE]
 > Este repositorio público contiene únicamente los **artefactos de distribución** de K8Dash: el binario ya compilado, el `Dockerfile` para construir la imagen, el manifiesto de despliegue de Kubernetes y esta documentación. El **código fuente** de la aplicación **no** se distribuye aquí. La imagen oficial se publica en Docker Hub como [`fermdez96/k8dash`](https://hub.docker.com/r/fermdez96/k8dash).
+
+---
+
+## 📚 Documentación
+
+> [!TIP]
+> **Toda la documentación de K8Dash está disponible como sitio web navegable:**
+>
+> ### 👉 🇪🇸 **[k8dash.fermdez.net/docs/es](https://k8dash.fermdez.net/docs/es/)** · 🇬🇧 **[k8dash.fermdez.net/docs/en](https://k8dash.fermdez.net/docs/en/)**
+>
+> Mismo contenido que la [Wiki](https://github.com/FerMdez/K8Dash/wiki) de este repositorio,
+> pero con **navegación entre páginas, índice lateral, enlaces cruzados y selector de
+> idioma**: la forma más cómoda de instalar, configurar y usar K8Dash.
+
+<details>
+<summary>📖 <b>Índice completo de la documentación</b> (haz clic para desplegar)</summary>
+
+### 🏁 Primeros pasos
+
+| Página | 🇪🇸 Español | 🇬🇧 English |
+|--------|------------|------------|
+| Inicio | [Inicio](https://k8dash.fermdez.net/docs/es/) | [Home](https://k8dash.fermdez.net/docs/en/) |
+| Inicio rápido | [Inicio rápido](https://k8dash.fermdez.net/docs/es/inicio-rapido) | [Quick start](https://k8dash.fermdez.net/docs/en/quick-start) |
+| Características | [Características](https://k8dash.fermdez.net/docs/es/caracteristicas) | [Features](https://k8dash.fermdez.net/docs/en/features) |
+| Requisitos previos | [Requisitos previos](https://k8dash.fermdez.net/docs/es/requisitos-previos) | [Prerequisites](https://k8dash.fermdez.net/docs/en/prerequisites) |
+
+### 📦 Instalación
+
+| Página | 🇪🇸 Español | 🇬🇧 English |
+|--------|------------|------------|
+| Docker | [Instalación con Docker](https://k8dash.fermdez.net/docs/es/instalacion-docker) | [Install with Docker](https://k8dash.fermdez.net/docs/en/installation-docker) |
+| Kubernetes | [Despliegue en Kubernetes](https://k8dash.fermdez.net/docs/es/instalacion-kubernetes) | [Deploy on Kubernetes](https://k8dash.fermdez.net/docs/en/installation-kubernetes) |
+| Binario | [Ejecución del binario](https://k8dash.fermdez.net/docs/es/instalacion-binario) | [Run the binary](https://k8dash.fermdez.net/docs/en/installation-binary) |
+| Integridad | [Verificar integridad](https://k8dash.fermdez.net/docs/es/verificar-integridad) | [Verify integrity](https://k8dash.fermdez.net/docs/en/verify-integrity) |
+
+### ⚙️ Configuración y seguridad
+
+| Página | 🇪🇸 Español | 🇬🇧 English |
+|--------|------------|------------|
+| Ajustes del dashboard | [Configuración del dashboard](https://k8dash.fermdez.net/docs/es/configuracion-dashboard) | [Dashboard settings](https://k8dash.fermdez.net/docs/en/dashboard-settings) |
+| Variables de entorno | [Configuración](https://k8dash.fermdez.net/docs/es/configuracion) | [Configuration](https://k8dash.fermdez.net/docs/en/configuration) |
+| Autenticación | [Autenticación](https://k8dash.fermdez.net/docs/es/autenticacion) | [Authentication](https://k8dash.fermdez.net/docs/en/authentication) |
+| Seguridad | [Seguridad](https://k8dash.fermdez.net/docs/es/seguridad) | [Security](https://k8dash.fermdez.net/docs/en/security) |
+| Ingress y TLS | [Exposición con Ingress](https://k8dash.fermdez.net/docs/es/exposicion-ingress) | [Ingress exposure](https://k8dash.fermdez.net/docs/en/ingress-exposure) |
+| **Despliegue en producción** | [**Despliegue en producción**](https://k8dash.fermdez.net/docs/es/despliegue-produccion) | [**Production deployment**](https://k8dash.fermdez.net/docs/en/production-deployment) |
+
+### 🖥️ Uso y ayuda
+
+| Página | 🇪🇸 Español | 🇬🇧 English |
+|--------|------------|------------|
+| Guía del dashboard | [Uso del dashboard](https://k8dash.fermdez.net/docs/es/uso-del-dashboard) | [Dashboard guide](https://k8dash.fermdez.net/docs/en/dashboard-guide) |
+| Acciones interactivas | [Acciones interactivas](https://k8dash.fermdez.net/docs/es/acciones-interactivas) | [Interactive actions](https://k8dash.fermdez.net/docs/en/interactive-actions) |
+| Solución de problemas | [Solución de problemas](https://k8dash.fermdez.net/docs/es/solucion-de-problemas) | [Troubleshooting](https://k8dash.fermdez.net/docs/en/troubleshooting) |
+| FAQ | [Preguntas frecuentes](https://k8dash.fermdez.net/docs/es/faq) | [FAQ](https://k8dash.fermdez.net/docs/en/faq) |
+
+</details>
+
+> ℹ️ La documentación se **regenera y publica automáticamente** con cada nueva versión, así
+> que siempre corresponde a la release más reciente. También puedes consultarla en la
+> [Wiki de GitHub](https://github.com/FerMdez/K8Dash/wiki) si prefieres leerla dentro del
+> propio repositorio.
 
 ---
 
@@ -124,7 +186,11 @@ K8DASH_CSRF=on
 K8DASH_SESSION_TTL=8h
 ```
 
-📘 Documentación detallada en la [wiki: Seguridad](https://github.com/FerMdez/K8Dash/wiki/Seguridad).
+📘 Documentación detallada en
+**[Seguridad](https://k8dash.fermdez.net/docs/es/seguridad)** y
+**[Configuración](https://k8dash.fermdez.net/docs/es/configuracion)**
+· *EN: [Security](https://k8dash.fermdez.net/docs/en/security) ·
+[Configuration](https://k8dash.fermdez.net/docs/en/configuration)*.
 
 ---
 
@@ -220,6 +286,10 @@ if ($actual -eq $expected) { "OK: $file coincide" } else { "ERROR: $file NO coin
 
 Si el resultado no coincide, **no ejecutes el binario**: vuelve a descargarlo.
 
+📘 Guía ampliada:
+**[Verificar la integridad](https://k8dash.fermdez.net/docs/es/verificar-integridad)**
+· *EN: [Verify integrity](https://k8dash.fermdez.net/docs/en/verify-integrity)*.
+
 ---
 
 ## ☸️ Despliegue dentro del cluster
@@ -264,6 +334,14 @@ adapta las anotaciones.
 > [!IMPORTANT]
 > El streaming de logs/eventos y el terminal interactivo usan WebSockets (rutas `/api/ws/...`). Si el proxy/Ingress no propaga el *Upgrade* o cierra conexiones ociosas, verás en el navegador *"WebSocket connection failed"*.
 
+📘 Guía completa con ejemplos de Ingress, TLS y cert-manager:
+**[Exposición con Ingress](https://k8dash.fermdez.net/docs/es/exposicion-ingress)**
+· *EN: [Ingress exposure](https://k8dash.fermdez.net/docs/en/ingress-exposure)*.
+
+🚀 **¿Despliegue en producción?** Sigue la lista de comprobación completa:
+**[Despliegue en producción](https://k8dash.fermdez.net/docs/es/despliegue-produccion)**
+· *EN: [Production deployment](https://k8dash.fermdez.net/docs/en/production-deployment)*.
+
 ---
 
 ## 🔒 Seguridad
@@ -278,6 +356,41 @@ adapta las anotaciones.
   (rollback/desinstalación) permiten interactuar directamente con las cargas de trabajo:
   concédelas solo a operadores de confianza.
 - No expongas el dashboard directamente a Internet sin una capa de autenticación.
+
+📘 Detalle completo (CORS, cabeceras, proxies de confianza, anti-CSRF, sesiones y
+autenticación OIDC): **[Seguridad](https://k8dash.fermdez.net/docs/es/seguridad)** y
+**[Autenticación](https://k8dash.fermdez.net/docs/es/autenticacion)**
+· *EN: [Security](https://k8dash.fermdez.net/docs/en/security) ·
+[Authentication](https://k8dash.fermdez.net/docs/en/authentication)*.
+
+### ✅ Antes de exponerlo: lista de comprobación
+
+Todas las recomendaciones de seguridad, exposición, RBAC y versionado están reunidas en una
+única guía paso a paso:
+
+👉 **[🚀 Despliegue en producción](https://k8dash.fermdez.net/docs/es/despliegue-produccion)**
+· *EN: [🚀 Production deployment](https://k8dash.fermdez.net/docs/en/production-deployment)*
+
+```bash
+# Resumen del endurecimiento recomendado
+K8DASH_CORS_ORIGINS="https://dashboard.example.com"
+K8DASH_TRUSTED_PROXIES="10.42.0.0/16"   # la red de tu Ingress
+K8DASH_CSRF=on
+K8DASH_SESSION_TTL=8h
+K8DASH_SETUP_TOKEN="$(openssl rand -hex 24)"
+```
+
+---
+
+## 🆘 ¿Necesitas ayuda?
+
+| Recurso | Enlace |
+|---------|--------|
+| 🚀 Despliegue en producción | [Español](https://k8dash.fermdez.net/docs/es/despliegue-produccion) · [English](https://k8dash.fermdez.net/docs/en/production-deployment) |
+| 🩺 Solución de problemas | [Español](https://k8dash.fermdez.net/docs/es/solucion-de-problemas) · [English](https://k8dash.fermdez.net/docs/en/troubleshooting) |
+| ❓ Preguntas frecuentes | [Español](https://k8dash.fermdez.net/docs/es/faq) · [English](https://k8dash.fermdez.net/docs/en/faq) |
+| 📚 Documentación completa | [Español](https://k8dash.fermdez.net/docs/es/) · [English](https://k8dash.fermdez.net/docs/en/) |
+| 🐛 Reportar un problema | [GitHub Issues](https://github.com/FerMdez/K8Dash/issues) |
 
 ---
 
