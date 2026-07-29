@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.48.1] - 2026-07-29
+
+- Mejora en funcionamiento y documentación de cierre forzado de todas las sesiones en otros navegadores.
+
+## [1.48.0] - 2026-07-29
+
+- Mejoras y optimizaciones para federación de autenticación con proveedores de identidad externos mediante OIDC.
+
 ## [1.47.0] - 2026-07-28
 
 - Rediseño y mejora de terminal virtual en teclados virtuales y pantallas táctiles.
