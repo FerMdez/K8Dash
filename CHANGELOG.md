@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.48.3] - 2026-07-30
+
+- Mejora en filtros de búsqueda para PODs pendientes.
+
+## [1.48.2] - 2026-07-30
+
+- Mejora en filtros de búsqueda para PODs pendientes o fallidos.
+
 ## [1.48.1] - 2026-07-29
 
 - Mejora en funcionamiento y documentación de cierre forzado de todas las sesiones en otros navegadores.
