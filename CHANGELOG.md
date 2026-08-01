@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.48.4] - 2026-08-02
+
+- Corrección de erratas en textos.
+
 ## [1.48.3] - 2026-07-30
 
 - Mejora en filtros de búsqueda para PODs pendientes.
