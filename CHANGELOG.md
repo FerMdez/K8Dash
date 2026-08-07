@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.48.6] - 2026-08-07
+
+- Solucionado error en vista de registro de eventos en Kubernetes Gateways.
+
 ## [1.48.5] - 2026-08-05
 
 - Mejora en cambio automático en estado de botón al supender/activarun cronjob desde la vista en detalle.
