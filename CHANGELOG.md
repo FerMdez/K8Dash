@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.48.7] - 2026-08-08
+
+- Mejoras en interfaz de usuario. * Volver al detalle de un recurso desde el editor YAML, no a la tabla completa. * Añadido botón para copiar el contenido completo de un ConfigMap.
+
 ## [1.48.6] - 2026-08-07
 
 - Solucionado error en vista de registro de eventos en Kubernetes Gateways.
