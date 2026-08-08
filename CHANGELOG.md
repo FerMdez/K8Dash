@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.48.8] - 2026-08-08
+
+- Mejora visual en icono para mostrar/ocultar secrets.
+
 ## [1.48.7] - 2026-08-08
 
 - Mejoras en interfaz de usuario. * Volver al detalle de un recurso desde el editor YAML, no a la tabla completa. * Añadido botón para copiar el contenido completo de un ConfigMap.
