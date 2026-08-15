@@ -9,6 +9,18 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.49.2] - 2026-08-15
+
+- Ajuste de nombre de tema 'ocre' a inglés.
+
+## [1.49.1] - 2026-08-15
+
+- Añadido tema 'Ocre' a la interfaz de usuario: seleccionable desde la configuración de apariencia.
+
+## [1.49.0] - 2026-08-15
+
+- Mejora en estilo claro de la interfaz de usuario.
+
 ## [1.48.8] - 2026-08-08
 
 - Mejora visual en icono para mostrar/ocultar secrets.
