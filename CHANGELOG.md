@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.49.3] - 2026-08-16
+
+- Añadida funcionalidad para 'Forzar eliminación' de un POD.
+
 ## [1.49.2] - 2026-08-15
 
 - Ajuste de nombre de tema 'ocre' a inglés.
