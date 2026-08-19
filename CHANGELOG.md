@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.49.5] - 2026-08-19
+
+- Mejoras en textos y traducciones.
+
 ## [1.49.4] - 2026-08-16
 
 - Mejora de estilos en menús contextuales de opciones al selecionar cargas de trabajo.
