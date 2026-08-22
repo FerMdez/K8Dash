@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.49.7] - 2026-08-22
+
+- Corrección en traducciones.
+
+## [1.49.6] - 2026-08-22
+
+- Mejoras para forzar la eliminación de PODs: 1. Añadido botón para "Forzar eliminación" de PODs en la vista de detallada del POD. 2. Corregidas traducciones de mensajes de confirmación para forzar la eliminación de un POD.
+
 ## [1.49.5] - 2026-08-19
 
 - Mejoras en textos y traducciones.
