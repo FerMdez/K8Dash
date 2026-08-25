@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.49.10] - 2026-08-25
+
+- Corrección en comportamiento errático del editor de artefactos YAML.
+
 ## [1.49.9] - 2026-08-24
 
 - Mejoras en traducciones de textos.
