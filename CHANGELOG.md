@@ -9,6 +9,15 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.49.12] - 2026-08-27
+
+- Mejora en nuevo icono para Namespaces.
+
+## [1.49.11] - 2026-08-27
+
+- Cambio en el icono de 'Namespaces' para diferenciarlo de 'StatefulSets'.
+- Mejoras en PWA.
+
 ## [1.49.10] - 2026-08-25
 
 - Corrección en comportamiento errático del editor de artefactos YAML.
