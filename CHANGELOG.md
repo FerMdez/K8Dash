@@ -9,6 +9,38 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.49.20] - 2026-08-27
+
+- Mejora en interacción con botones de la interfaz del terminal en PWA.
+
+## [1.49.19] - 2026-08-27
+
+- Ajuste de diseño en terminal interactivo para no interferir con botones nativos de PWA.
+
+## [1.49.18] - 2026-08-27
+
+- Ajuste visual de rendija de redimensionamiento para ventanas de detalles en PWA.
+
+## [1.49.17] - 2026-08-27
+
+- Ajuste visual de rendija de redimensionamiento para ventanas de detalles en PWA.
+
+## [1.49.16] - 2026-08-27
+
+- Mejora al dibujar la tarjeta de detalles.
+
+## [1.49.15] - 2026-08-27
+
+- Ajuste en tamaño de margen para botones nativos de la interfaz en PWA.
+
+## [1.49.14] - 2026-08-27
+
+- Cambio en icono de Namespaces por el icono de StatefulSets y viceversa.
+
+## [1.49.13] - 2026-08-27
+
+- Corregida funcionalidad de botón para cerrar detalle de una carga de trabajo, en PWA.
+
 ## [1.49.12] - 2026-08-27
 
 - Mejora en nuevo icono para Namespaces.
