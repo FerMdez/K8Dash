@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.49.22] - 2026-08-29
+
+- Añadidos nuevos iconos para tarjeta de documentación oficial.
+
+## [1.49.21] - 2026-08-29
+
+- Mejoras en sección de información de la aplicación: añadida documentación oficial.
+
 ## [1.49.20] - 2026-08-27
 
 - Mejora en interacción con botones de la interfaz del terminal en PWA.
