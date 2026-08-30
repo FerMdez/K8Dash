@@ -99,7 +99,9 @@ based on `distroless`.
 - **Real-time logs** over WebSocket (per pod or aggregated for a full workload).
 - **Interactive terminal** (`kubectl exec`) against each pod's container.
 - **Optional built-in authentication** (username/password with PBKDF2 or OIDC/OAuth2),
-  with brute-force protection.
+  with brute-force protection. If the identity provider (IdP) does not respond when starting
+  the OIDC sign-in, a **clear error page** is shown (in your language, with the error
+  code highlighted and an option to copy the details) instead of a raw JSON.
 - **Light/dark theme**, instant search/filtering, column sorting and auto-refresh.
   **Installable PWA** on desktop and mobile.
 - **Embedded frontend** in the binary: no need to serve files separately.

@@ -100,7 +100,9 @@ minúscula basada en `distroless`.
 - **Logs en tiempo real** vía WebSocket (por pod o agregados de un workload completo).
 - **Terminal interactivo** (`kubectl exec`) contra el contenedor de cada pod.
 - **Autenticación integrada opcional** (usuario/contraseña con PBKDF2 u OIDC/OAuth2),
-  con protección contra fuerza bruta.
+  con protección contra fuerza bruta. Si el proveedor de identidad (IdP) no responde al
+  iniciar sesión OIDC, se muestra una **página de error clara** (en tu idioma, con el
+  código de error destacado y opción de copiar los detalles) en lugar de un JSON crudo.
 - **Tema claro/oscuro**, búsqueda/filtrado instantáneo, ordenación por columnas y
   auto-refresco. **PWA instalable** en escritorio y móvil.
 - **Frontend embebido** en el binario: no hay que servir archivos aparte.

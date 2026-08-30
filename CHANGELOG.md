@@ -9,6 +9,28 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.50.4] - 2026-08-31
+
+- Corrección de problema con caché al guardar configuración de 'Seguridad y Acceso', cuando hay múltiples PODs de la aplicación desplagados.
+
+## [1.50.3] - 2026-08-31
+
+- Mejora en páginas y control de errores al conectar con un proveedor de identidad externo (OIDC).
+- Mejora en guardado de configuración en sección de 'Seguridad y Acceso'.
+
+## [1.50.2] - 2026-08-30
+
+- Mejoras en configuración y guardado de cambios en 'Seguridad y Acceso'.
+
+## [1.50.1] - 2026-08-30
+
+- Mejora en gestión de errores de proveedor externo de autenticación mediante OIDC.
+
+## [1.50.0] - 2026-08-30
+
+- Corrección en formateo del código.
+- Mejora en flujo de control e identificación de errores en caso de fallo en conexión con proveedor de autenticación externo mediante OIDC.
+
 ## [1.49.22] - 2026-08-29
 
 - Añadidos nuevos iconos para tarjeta de documentación oficial.
