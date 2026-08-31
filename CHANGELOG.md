@@ -9,6 +9,11 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.50.5] - 2026-08-31
+
+- Corregido comportamiento en opción de configuración para seleccionar tiempos absolutos o relativos en la vista de la interfaz de usuario.
+- Corregido comportamiento de 'Forzar eliminación' de PODs al desactivar la opción de configuración para 'Confirmar acciones destructivas'.
+
 ## [1.50.4] - 2026-08-31
 
 - Corrección de problema con caché al guardar configuración de 'Seguridad y Acceso', cuando hay múltiples PODs de la aplicación desplagados.
