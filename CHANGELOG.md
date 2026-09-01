@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.50.6] - 2026-09-02
+
+- Mejora para incluir los 'hostnames' de un Gateway en la tabla de la sección Gateways, similar a como sucede con los Ingress.
+
 ## [1.50.5] - 2026-08-31
 
 - Corregido comportamiento en opción de configuración para seleccionar tiempos absolutos o relativos en la vista de la interfaz de usuario.
