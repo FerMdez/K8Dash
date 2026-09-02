@@ -9,6 +9,15 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.50.8] - 2026-09-02
+
+- Ajuste de etiquetas con enlaces a DNS de Ingress y Gateways, para mantener un aspecto acorde a las preferencias del usuario.
+- Mejora en estilos de detalles de Ingress y Gateways, para reglas de enrutado y listeners y rutas.
+
+## [1.50.7] - 2026-09-02
+
+- Mejora en detalles de Ingress y Gateways para añadir enlaces de acceso a los DNS expuestos.
+
 ## [1.50.6] - 2026-09-02
 
 - Mejora para incluir los 'hostnames' de un Gateway en la tabla de la sección Gateways, similar a como sucede con los Ingress.
