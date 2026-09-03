@@ -9,6 +9,11 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.50.9] - 2026-09-03
+
+- Mejoras en tema de alto contraste.
+- Añadido tema de alto contraste, para mejorar la accesibilidad de la interfaz de usuario.
+
 ## [1.50.8] - 2026-09-02
 
 - Ajuste de etiquetas con enlaces a DNS de Ingress y Gateways, para mantener un aspecto acorde a las preferencias del usuario.
