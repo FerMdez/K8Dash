@@ -9,6 +9,22 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.51.3] - 2026-09-08
+
+- Mejora en interfaz de configuración de 2FA.
+
+## [1.51.2] - 2026-09-08
+
+- Mejoras visuales en configuración 2FA.
+
+## [1.51.1] - 2026-09-08
+
+- Mejoras y solución de errores en decodificación de QR.
+
+## [1.51.0] - 2026-09-08
+
+- Ajuste en formato de código fuente.
+
 ## [1.50.9] - 2026-09-03
 
 - Mejoras en tema de alto contraste.

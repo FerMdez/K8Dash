@@ -98,7 +98,8 @@ based on `distroless`.
   concurrency control (`resourceVersion`).
 - **Real-time logs** over WebSocket (per pod or aggregated for a full workload).
 - **Interactive terminal** (`kubectl exec`) against each pod's container.
-- **Optional built-in authentication** (username/password with PBKDF2 or OIDC/OAuth2),
+- **Optional built-in authentication** (username/password with PBKDF2, with optional
+  **two-step verification (2FA)** via TOTP and backup codes, or OIDC/OAuth2),
   with brute-force protection. If the identity provider (IdP) does not respond when starting
   the OIDC sign-in, a **clear error page** is shown (in your language, with the error
   code highlighted and an option to copy the details) instead of a raw JSON.

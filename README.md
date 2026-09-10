@@ -99,7 +99,8 @@ minúscula basada en `distroless`.
   con control de concurrencia optimista (`resourceVersion`).
 - **Logs en tiempo real** vía WebSocket (por pod o agregados de un workload completo).
 - **Terminal interactivo** (`kubectl exec`) contra el contenedor de cada pod.
-- **Autenticación integrada opcional** (usuario/contraseña con PBKDF2 u OIDC/OAuth2),
+- **Autenticación integrada opcional** (usuario/contraseña con PBKDF2, con **verificación en
+  dos pasos (2FA)** opcional vía TOTP y códigos de respaldo, u OIDC/OAuth2),
   con protección contra fuerza bruta. Si el proveedor de identidad (IdP) no responde al
   iniciar sesión OIDC, se muestra una **página de error clara** (en tu idioma, con el
   código de error destacado y opción de copiar los detalles) en lugar de un JSON crudo.
