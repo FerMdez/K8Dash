@@ -9,6 +9,15 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.52.3] - 2026-09-16
+
+- Mejoras en traducciones en general.
+- Mejoras en traducciones en general.
+
+## [1.52.2] - 2026-09-16
+
+- Mejoras en traducción de títulos de notificaciones y eventos.
+
 ## [1.52.1] - 2026-09-15
 
 - Ajuste en traducciones de texto.
