@@ -9,6 +9,15 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.53.0] - 2026-09-20
+
+- Mejora en compilación de imagen Docker multi-arch.
+- Mejora en compilación de imagen Docker multi-arch.
+- Mejora en compilación de imagen Docker multi-arch.
+- Mejora en compilación de imagen Docker multi-arch.
+- Mejora en compilación de imagen Docker multi-arch.
+- Mejoras en orden y personalización de tablas.
+
 ## [1.52.4] - 2026-09-18
 
 - Mejoras visuales en interfaz de usuario.
