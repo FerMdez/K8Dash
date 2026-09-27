@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.53.2] - 2026-09-27
+
+- Corrección de posición automática de cursor en diálogo para escalado de artefactos.
+
+## [1.53.1] - 2026-09-27
+
+- Mejora en orden inteligente de lista de nodos del clúster.
+
 ## [1.53.0] - 2026-09-20
 
 - Mejora en compilación de imagen Docker multi-arch.
