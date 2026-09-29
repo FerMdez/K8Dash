@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.53.6] - 2026-09-29
+
+- Mejora de rendimiento en pantalla de Resumen.
+
+## [1.53.5] - 2026-09-29
+
+- Mejora en selección de escala (absoluta o relativa) para gráficos.
+
 ## [1.53.4] - 2026-09-28
 
 - Mejora en formato de logs para respetar códigos ANSI.
