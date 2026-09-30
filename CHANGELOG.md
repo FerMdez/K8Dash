@@ -9,6 +9,12 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.53.7] - 2026-09-30
+
+- Ajuste de pipeline para adaptarse a despliegue tanto con Depoyment como con Daemonset.
+- Añadidos logs conjuntos de todos los PODs correspondientes a los DaemonSets y ReplicaSets.
+- Mejoras en formato de logs del servidor.
+
 ## [1.53.6] - 2026-09-29
 
 - Mejora de rendimiento en pantalla de Resumen.
