@@ -108,6 +108,11 @@ rules:
     resources: ["poddisruptionbudgets"]
     verbs: ["delete"]
   # Red.
+  # EndpointSlices (discovery.k8s.io/v1): sustituyen a core/v1 Endpoints,
+  # obsoleto desde Kubernetes v1.33.
+  - apiGroups: ["discovery.k8s.io"]
+    resources: ["endpointslices"]
+    verbs: ["get", "list", "watch"]
   - apiGroups: ["networking.k8s.io"]
     resources: ["ingresses"]
     verbs: ["get", "list", "watch"]

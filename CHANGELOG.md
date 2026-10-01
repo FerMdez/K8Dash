@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.54.0] - 2026-09-30
+
+- Actualizadas librerías y dependencias.
+
 ## [1.53.7] - 2026-09-30
 
 - Ajuste de pipeline para adaptarse a despliegue tanto con Depoyment como con Daemonset.
