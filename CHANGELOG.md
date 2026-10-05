@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.54.1] - 2026-10-03
+
+- Mejoras en contraste de colores y formato ANSI para registros destacados.
+
 ## [1.54.0] - 2026-09-30
 
 - Actualizadas librerías y dependencias.
