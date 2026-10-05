@@ -9,6 +9,11 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.55.0] - 2026-10-05
+
+- Añadida posibilidad de forzar la eliminación de un PVC.
+- Mejoras en reenvío de puertos para permitir HTTPS.
+
 ## [1.54.1] - 2026-10-03
 
 - Mejoras en contraste de colores y formato ANSI para registros destacados.
