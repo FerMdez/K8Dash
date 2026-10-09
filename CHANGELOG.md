@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.55.1] - 2026-10-07
+
+- Añadida funcionalidad para permitir abrir URLs directamente desde la pantalla de logs.
+
 ## [1.55.0] - 2026-10-05
 
 - Añadida posibilidad de forzar la eliminación de un PVC.
