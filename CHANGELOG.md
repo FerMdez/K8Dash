@@ -9,6 +9,14 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.56.1] - 2026-10-13
+
+- Añadida fucnionalidad para seleccionar todos los elementos de una sección, también en la versión para smartphones.
+
+## [1.56.0] - 2026-10-12
+
+- Mejoras y corrección de errores en desplazamineto y selección de tarjetas en versión móvil de la aplicación.
+
 ## [1.55.1] - 2026-10-07
 
 - Añadida funcionalidad para permitir abrir URLs directamente desde la pantalla de logs.
