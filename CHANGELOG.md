@@ -9,6 +9,11 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.56.2] - 2026-10-17
+
+- Correcciones en formateo de código fuente.
+- Mejora en acceso directo a PODs según estado, desde la pantalla de resumen.
+
 ## [1.56.1] - 2026-10-13
 
 - Añadida fucnionalidad para seleccionar todos los elementos de una sección, también en la versión para smartphones.
