@@ -1,0 +1,4 @@
+# Botón "Sponsor" nativo de GitHub para el repositorio público.
+# GitHub Sponsors button for the public repository.
+# Se publica como .github/FUNDING.yml desde .ci/publish-public.sh
+github: [FerMdez]

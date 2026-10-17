@@ -10,6 +10,7 @@ minúscula basada en `distroless`.
 ![Docker](https://img.shields.io/badge/Docker-fermdez96%2Fk8dash-2496ED?logo=docker&logoColor=white)
 ![License](https://shields.io/badge/license-CC--BY--NC--SA-green)
 [![Docs](https://img.shields.io/badge/📚%20Docs-k8dash.fermdez.net-4C8BF5)](https://k8dash.fermdez.net/docs/es/)
+[![Sponsor](https://img.shields.io/badge/Sponsor-FerMdez-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/FerMdez)
 
 > [!NOTE]
 > Este repositorio público contiene únicamente los **artefactos de distribución** de K8Dash: el binario ya compilado, el `Dockerfile` para construir la imagen, el manifiesto de despliegue de Kubernetes y esta documentación. El **código fuente** de la aplicación **no** se distribuye aquí. La imagen oficial se publica en Docker Hub como [`fermdez96/k8dash`](https://hub.docker.com/r/fermdez96/k8dash).
@@ -394,6 +395,23 @@ K8DASH_SETUP_TOKEN="$(openssl rand -hex 24)"
 | ❓ Preguntas frecuentes | [Español](https://k8dash.fermdez.net/docs/es/faq) · [English](https://k8dash.fermdez.net/docs/en/faq) |
 | 📚 Documentación completa | [Español](https://k8dash.fermdez.net/docs/es/) · [English](https://k8dash.fermdez.net/docs/en/) |
 | 🐛 Reportar un problema | [GitHub Issues](https://github.com/FerMdez/K8Dash/issues) |
+
+---
+
+## 💖 Apoya el proyecto
+
+K8Dash es un proyecto **gratuito** que desarrollo y mantengo en mi tiempo libre. Si te
+resulta útil y quieres ayudar a que siga evolucionando (nuevas funcionalidades, correcciones
+y documentación), puedes hacerlo mediante **GitHub Sponsors**:
+
+<p align="center">
+  <a href="https://github.com/sponsors/FerMdez">
+    <img src="https://img.shields.io/badge/💖%20Patrocinar%20en%20GitHub-FerMdez-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Patrocinar en GitHub Sponsors">
+  </a>
+</p>
+
+¡Cualquier aportación, por pequeña que sea, es enormemente apreciada! ⭐ Dar una estrella al
+repositorio también ayuda mucho.
 
 ---
 
