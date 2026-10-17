@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.56.3] - 2026-10-17
+
+- Mejoras en sección de CronJobs para mostrar accesos rápidos en función del estado del CronJob.
+
 ## [1.56.2] - 2026-10-17
 
 - Correcciones en formateo de código fuente.
