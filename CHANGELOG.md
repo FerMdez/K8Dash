@@ -9,6 +9,11 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.56.4] - 2026-10-24
+
+- Mejora en edición de manifiestos, cuando estos incluyen bloques de código.
+- Mantener preferencias de 'Timestamp' y 'Ajuste de línea' en logs de contenedores.
+
 ## [1.56.3] - 2026-10-17
 
 - Mejoras en sección de CronJobs para mostrar accesos rápidos en función del estado del CronJob.
