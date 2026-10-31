@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.57.0] - 2026-10-28
+
+- Añadido banner informativo para nuevas versiones de K8Dash.
+
 ## [1.56.5] - 2026-10-26
 
 - Mejoras en diseño de logo de K8Dash.
