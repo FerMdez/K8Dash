@@ -9,6 +9,15 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.58.1] - 2026-11-12
+
+- Mejoras visuales en gráficas para ver rendimiento de PODs.
+- Mejoras visuales en gráficas para ver rendimiento de PODs.
+
+## [1.58.0] - 2026-11-12
+
+- Mejora en detalles de los PODs para mostrar gráficas de uso de CPU y Memoria de cada POD.
+
 ## [1.57.1] - 2026-11-01
 
 - Ajuste en formateo de código fuente.
