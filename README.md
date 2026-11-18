@@ -1,141 +1,140 @@
 # ⎈ K8Dash
 
-**🌐 Idioma:** Español · [English](README.en.md)
+**🌐 Language:** English · [Español](README.es.md)
 
-Dashboard web **moderno, rápido y ligero** para clusters de Kubernetes.
-Una alternativa al *Kubernetes Dashboard* oficial con una interfaz mejorada, métricas en
-tiempo real y un único binario sin dependencias externas, empaquetado en una imagen Docker
-minúscula basada en `distroless`.
+A **modern, fast and lightweight** web dashboard for Kubernetes clusters.
+An alternative to the official *Kubernetes Dashboard* with an improved interface, real-time
+metrics and a single binary with no external dependencies, packaged in a tiny Docker image
+based on `distroless`.
 
 ![Docker](https://img.shields.io/badge/Docker-fermdez96%2Fk8dash-2496ED?logo=docker&logoColor=white)
 ![License](https://shields.io/badge/license-CC--BY--NC--SA-green)
-[![Docs](https://img.shields.io/badge/📚%20Docs-k8dash.fermdez.net-4C8BF5)](https://k8dash.fermdez.net/docs/es/)
+[![Docs](https://img.shields.io/badge/📚%20Docs-k8dash.fermdez.net-4C8BF5)](https://k8dash.fermdez.net/docs/en/)
 [![Sponsor](https://img.shields.io/badge/Sponsor-FerMdez-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/FerMdez)
 
 > [!NOTE]
-> Este repositorio público contiene únicamente los **artefactos de distribución** de K8Dash: el binario ya compilado, el `Dockerfile` para construir la imagen, el manifiesto de despliegue de Kubernetes y esta documentación. El **código fuente** de la aplicación **no** se distribuye aquí. La imagen oficial se publica en Docker Hub como [`fermdez96/k8dash`](https://hub.docker.com/r/fermdez96/k8dash).
+> This public repository contains only the **distribution artifacts** of K8Dash: the precompiled binary, the `Dockerfile` to build the image, the Kubernetes deployment manifest and this documentation. The application's **source code** is **not** distributed here. The official image is published on Docker Hub as [`fermdez96/k8dash`](https://hub.docker.com/r/fermdez96/k8dash).
 
 ---
 
-## 📚 Documentación
+## 📚 Documentation
 
 > [!TIP]
-> **Toda la documentación de K8Dash está disponible como sitio web navegable:**
+> **All K8Dash documentation is available as a browsable website:**
 >
-> ### 👉 🇪🇸 **[k8dash.fermdez.net/docs/es](https://k8dash.fermdez.net/docs/es/)** · 🇬🇧 **[k8dash.fermdez.net/docs/en](https://k8dash.fermdez.net/docs/en/)**
+> ### 👉 🇬🇧 **[k8dash.fermdez.net/docs/en](https://k8dash.fermdez.net/docs/en/)** · 🇪🇸 **[k8dash.fermdez.net/docs/es](https://k8dash.fermdez.net/docs/es/)**
 >
-> Mismo contenido que la [Wiki](https://github.com/FerMdez/K8Dash/wiki) de este repositorio,
-> pero con **navegación entre páginas, índice lateral, enlaces cruzados y selector de
-> idioma**: la forma más cómoda de instalar, configurar y usar K8Dash.
+> Same content as this repository's [Wiki](https://github.com/FerMdez/K8Dash/wiki), but with
+> **page navigation, a sidebar index, cross-links and a language switcher**: the most
+> comfortable way to install, configure and use K8Dash.
 
 <details>
-<summary>📖 <b>Índice completo de la documentación</b> (haz clic para desplegar)</summary>
+<summary>📖 <b>Full documentation index</b> (click to expand)</summary>
 
-### 🏁 Primeros pasos
+### 🏁 Getting started
 
-| Página | 🇪🇸 Español | 🇬🇧 English |
-|--------|------------|------------|
-| Inicio | [Inicio](https://k8dash.fermdez.net/docs/es/) | [Home](https://k8dash.fermdez.net/docs/en/) |
-| Inicio rápido | [Inicio rápido](https://k8dash.fermdez.net/docs/es/inicio-rapido) | [Quick start](https://k8dash.fermdez.net/docs/en/quick-start) |
-| Características | [Características](https://k8dash.fermdez.net/docs/es/caracteristicas) | [Features](https://k8dash.fermdez.net/docs/en/features) |
-| Requisitos previos | [Requisitos previos](https://k8dash.fermdez.net/docs/es/requisitos-previos) | [Prerequisites](https://k8dash.fermdez.net/docs/en/prerequisites) |
+| Page | 🇬🇧 English | 🇪🇸 Español |
+|------|------------|------------|
+| Home | [Home](https://k8dash.fermdez.net/docs/en/) | [Inicio](https://k8dash.fermdez.net/docs/es/) |
+| Quick start | [Quick start](https://k8dash.fermdez.net/docs/en/quick-start) | [Inicio rápido](https://k8dash.fermdez.net/docs/es/inicio-rapido) |
+| Features | [Features](https://k8dash.fermdez.net/docs/en/features) | [Características](https://k8dash.fermdez.net/docs/es/caracteristicas) |
+| Prerequisites | [Prerequisites](https://k8dash.fermdez.net/docs/en/prerequisites) | [Requisitos previos](https://k8dash.fermdez.net/docs/es/requisitos-previos) |
 
-### 📦 Instalación
+### 📦 Installation
 
-| Página | 🇪🇸 Español | 🇬🇧 English |
-|--------|------------|------------|
-| Docker | [Instalación con Docker](https://k8dash.fermdez.net/docs/es/instalacion-docker) | [Install with Docker](https://k8dash.fermdez.net/docs/en/installation-docker) |
-| Kubernetes | [Despliegue en Kubernetes](https://k8dash.fermdez.net/docs/es/instalacion-kubernetes) | [Deploy on Kubernetes](https://k8dash.fermdez.net/docs/en/installation-kubernetes) |
-| Binario | [Ejecución del binario](https://k8dash.fermdez.net/docs/es/instalacion-binario) | [Run the binary](https://k8dash.fermdez.net/docs/en/installation-binary) |
-| Integridad | [Verificar integridad](https://k8dash.fermdez.net/docs/es/verificar-integridad) | [Verify integrity](https://k8dash.fermdez.net/docs/en/verify-integrity) |
+| Page | 🇬🇧 English | 🇪🇸 Español |
+|------|------------|------------|
+| Docker | [Install with Docker](https://k8dash.fermdez.net/docs/en/installation-docker) | [Instalación con Docker](https://k8dash.fermdez.net/docs/es/instalacion-docker) |
+| Kubernetes | [Deploy on Kubernetes](https://k8dash.fermdez.net/docs/en/installation-kubernetes) | [Despliegue en Kubernetes](https://k8dash.fermdez.net/docs/es/instalacion-kubernetes) |
+| Binary | [Run the binary](https://k8dash.fermdez.net/docs/en/installation-binary) | [Ejecución del binario](https://k8dash.fermdez.net/docs/es/instalacion-binario) |
+| Integrity | [Verify integrity](https://k8dash.fermdez.net/docs/en/verify-integrity) | [Verificar integridad](https://k8dash.fermdez.net/docs/es/verificar-integridad) |
 
-### ⚙️ Configuración y seguridad
+### ⚙️ Configuration and security
 
-| Página | 🇪🇸 Español | 🇬🇧 English |
-|--------|------------|------------|
-| Ajustes del dashboard | [Configuración del dashboard](https://k8dash.fermdez.net/docs/es/configuracion-dashboard) | [Dashboard settings](https://k8dash.fermdez.net/docs/en/dashboard-settings) |
-| Variables de entorno | [Configuración](https://k8dash.fermdez.net/docs/es/configuracion) | [Configuration](https://k8dash.fermdez.net/docs/en/configuration) |
-| Autenticación | [Autenticación](https://k8dash.fermdez.net/docs/es/autenticacion) | [Authentication](https://k8dash.fermdez.net/docs/en/authentication) |
-| Seguridad | [Seguridad](https://k8dash.fermdez.net/docs/es/seguridad) | [Security](https://k8dash.fermdez.net/docs/en/security) |
-| Ingress y TLS | [Exposición con Ingress](https://k8dash.fermdez.net/docs/es/exposicion-ingress) | [Ingress exposure](https://k8dash.fermdez.net/docs/en/ingress-exposure) |
-| **Despliegue en producción** | [**Despliegue en producción**](https://k8dash.fermdez.net/docs/es/despliegue-produccion) | [**Production deployment**](https://k8dash.fermdez.net/docs/en/production-deployment) |
+| Page | 🇬🇧 English | 🇪🇸 Español |
+|------|------------|------------|
+| Dashboard settings | [Dashboard settings](https://k8dash.fermdez.net/docs/en/dashboard-settings) | [Configuración del dashboard](https://k8dash.fermdez.net/docs/es/configuracion-dashboard) |
+| Environment variables | [Configuration](https://k8dash.fermdez.net/docs/en/configuration) | [Configuración](https://k8dash.fermdez.net/docs/es/configuracion) |
+| Authentication | [Authentication](https://k8dash.fermdez.net/docs/en/authentication) | [Autenticación](https://k8dash.fermdez.net/docs/es/autenticacion) |
+| Security | [Security](https://k8dash.fermdez.net/docs/en/security) | [Seguridad](https://k8dash.fermdez.net/docs/es/seguridad) |
+| Ingress and TLS | [Ingress exposure](https://k8dash.fermdez.net/docs/en/ingress-exposure) | [Exposición con Ingress](https://k8dash.fermdez.net/docs/es/exposicion-ingress) |
+| **Production deployment** | [**Production deployment**](https://k8dash.fermdez.net/docs/en/production-deployment) | [**Despliegue en producción**](https://k8dash.fermdez.net/docs/es/despliegue-produccion) |
 
-### 🖥️ Uso y ayuda
+### 🖥️ Usage and help
 
-| Página | 🇪🇸 Español | 🇬🇧 English |
-|--------|------------|------------|
-| Guía del dashboard | [Uso del dashboard](https://k8dash.fermdez.net/docs/es/uso-del-dashboard) | [Dashboard guide](https://k8dash.fermdez.net/docs/en/dashboard-guide) |
-| Acciones interactivas | [Acciones interactivas](https://k8dash.fermdez.net/docs/es/acciones-interactivas) | [Interactive actions](https://k8dash.fermdez.net/docs/en/interactive-actions) |
-| Solución de problemas | [Solución de problemas](https://k8dash.fermdez.net/docs/es/solucion-de-problemas) | [Troubleshooting](https://k8dash.fermdez.net/docs/en/troubleshooting) |
-| FAQ | [Preguntas frecuentes](https://k8dash.fermdez.net/docs/es/faq) | [FAQ](https://k8dash.fermdez.net/docs/en/faq) |
+| Page | 🇬🇧 English | 🇪🇸 Español |
+|------|------------|------------|
+| Dashboard guide | [Dashboard guide](https://k8dash.fermdez.net/docs/en/dashboard-guide) | [Uso del dashboard](https://k8dash.fermdez.net/docs/es/uso-del-dashboard) |
+| Interactive actions | [Interactive actions](https://k8dash.fermdez.net/docs/en/interactive-actions) | [Acciones interactivas](https://k8dash.fermdez.net/docs/es/acciones-interactivas) |
+| Troubleshooting | [Troubleshooting](https://k8dash.fermdez.net/docs/en/troubleshooting) | [Solución de problemas](https://k8dash.fermdez.net/docs/es/solucion-de-problemas) |
+| FAQ | [FAQ](https://k8dash.fermdez.net/docs/en/faq) | [Preguntas frecuentes](https://k8dash.fermdez.net/docs/es/faq) |
 
 </details>
 
-> ℹ️ La documentación se **regenera y publica automáticamente** con cada nueva versión, así
-> que siempre corresponde a la release más reciente. También puedes consultarla en la
-> [Wiki de GitHub](https://github.com/FerMdez/K8Dash/wiki) si prefieres leerla dentro del
-> propio repositorio.
+> ℹ️ The documentation is **regenerated and published automatically** with every new
+> version, so it always matches the latest release. You can also read it in the
+> [GitHub Wiki](https://github.com/FerMdez/K8Dash/wiki) if you prefer to stay inside the
+> repository.
 
 ---
 
-## ✨ Características
+## ✨ Features
 
-- **Resumen del cluster** con tarjetas de métricas (CPU/memoria reales vía `metrics-server`),
-  estado de nodos, pods y conteo de todos los workloads.
-- **Gráficas de tendencias en tiempo real**: un recolector en segundo plano acumula un
-  histórico circular de CPU, memoria y pods, de modo que las gráficas muestran datos aunque
-  nadie tenga el dashboard abierto al arrancar.
-- **Visualización completa de recursos**: Nodos, Eventos, Pods, Deployments, StatefulSets,
-  DaemonSets, ReplicaSets, Jobs, CronJobs, Services, Ingresses, Endpoints, Gateways y
+- **Cluster overview** with metric cards (real CPU/memory via `metrics-server`),
+  node status, pods and counts of all workloads.
+- **Real-time trend charts**: a background collector accumulates a circular history of CPU,
+  memory and pods, so the charts show data even if no one had the dashboard open at startup.
+- **Full resource visualization**: Nodes, Events, Pods, Deployments, StatefulSets,
+  DaemonSets, ReplicaSets, Jobs, CronJobs, Services, Ingresses, Endpoints, Gateways and
   GatewayClasses (Gateway API), ConfigMaps, Secrets, PersistentVolumes, PVCs, StorageClasses,
-  HorizontalPodAutoscalers, ServiceAccounts y releases de **Helm** v3.
-- **Vistas de detalle enriquecidas** (drawer lateral) para la mayoría de recursos.
-- **Advertencias contextuales**: los eventos de tipo *Warning* recientes se agrupan por
-  objeto y se muestran como indicadores en las tablas de pods y workloads.
-- **Acciones interactivas** completas: ver logs, escalar, reiniciar (rolling restart),
-  eliminar, prune de ReplicaSets, suspender/disparar CronJobs, editar Secrets, rollback y
-  desinstalación de releases de Helm, etc.
-- **Port forwarding integrado** con proxy HTTP hacia el puerto reenviado.
-- **Editor de manifiestos YAML en tiempo real** para cualquier recurso del cluster (incl. CRDs),
-  con control de concurrencia optimista (`resourceVersion`).
-- **Logs en tiempo real** vía WebSocket (por pod o agregados de un workload completo).
-- **Terminal interactivo** (`kubectl exec`) contra el contenedor de cada pod.
-- **Autenticación integrada opcional** (usuario/contraseña con PBKDF2, con **verificación en
-  dos pasos (2FA)** opcional vía TOTP y códigos de respaldo, u OIDC/OAuth2),
-  con protección contra fuerza bruta. Si el proveedor de identidad (IdP) no responde al
-  iniciar sesión OIDC, se muestra una **página de error clara** (en tu idioma, con el
-  código de error destacado y opción de copiar los detalles) en lugar de un JSON crudo.
-- **Tema claro/oscuro**, búsqueda/filtrado instantáneo, ordenación por columnas y
-  auto-refresco. **PWA instalable** en escritorio y móvil.
-- **Frontend embebido** en el binario: no hay que servir archivos aparte.
-- **Imagen Docker minúscula** (~15 MB) basada en `distroless`, sin shell, ejecutada como
-  usuario no-root.
+  HorizontalPodAutoscalers, ServiceAccounts and **Helm** v3 releases.
+- **Rich detail views** (side drawer) for most resources.
+- **Contextual warnings**: recent *Warning* events are grouped by object and shown as
+  indicators in the pod and workload tables.
+- **Full interactive actions**: view logs, scale, restart (rolling restart), delete, prune
+  ReplicaSets, suspend/trigger CronJobs, edit Secrets, rollback and uninstall Helm releases,
+  and more.
+- **Built-in port forwarding** with an HTTP proxy to the forwarded port.
+- **Live YAML manifest editor** for any cluster resource (including CRDs), with optimistic
+  concurrency control (`resourceVersion`).
+- **Real-time logs** over WebSocket (per pod or aggregated for a full workload).
+- **Interactive terminal** (`kubectl exec`) against each pod's container.
+- **Optional built-in authentication** (username/password with PBKDF2, with optional
+  **two-step verification (2FA)** via TOTP and backup codes, or OIDC/OAuth2),
+  with brute-force protection. If the identity provider (IdP) does not respond when starting
+  the OIDC sign-in, a **clear error page** is shown (in your language, with the error
+  code highlighted and an option to copy the details) instead of a raw JSON.
+- **Light/dark theme**, instant search/filtering, column sorting and auto-refresh.
+  **Installable PWA** on desktop and mobile.
+- **Embedded frontend** in the binary: no need to serve files separately.
+- **Tiny Docker image** (~15 MB) based on `distroless`, without a shell, running as a
+  non-root user.
 
 ---
 
-## 🐳 Uso directo con Docker
+## 🐳 Direct usage with Docker
 
-La imagen se publica en Docker Hub: [`fermdez96/k8dash`](https://hub.docker.com/r/fermdez96/k8dash).
+The image is published on Docker Hub: [`fermdez96/k8dash`](https://hub.docker.com/r/fermdez96/k8dash).
 
 ```bash
-# Descargar la última versión
+# Pull the latest version
 docker pull fermdez96/k8dash:latest
 
-# Ejecutar montando tu kubeconfig
+# Run mounting your kubeconfig
 docker run --rm -p 8080:8080 \
   -v ${HOME}/.kube/config:/kube/config:ro \
   -e KUBECONFIG=/kube/config \
   fermdez96/k8dash:latest
 ```
 
-Abre el navegador en **http://localhost:8080**.
+Open your browser at **http://localhost:8080**.
 
-> En Linux puede ser necesario `--network host` si tu API server es accesible vía
-> `127.0.0.1` (p. ej. con `kind`/`minikube`).
+> On Linux you may need `--network host` if your API server is reachable via
+> `127.0.0.1` (e.g. with `kind`/`minikube`).
 
-### Fijar una versión concreta
+### Pin a specific version
 
-Además de `latest`, cada release publica su tag semver:
+In addition to `latest`, each release publishes its semver tag:
 
 ```bash
 docker pull fermdez96/k8dash:1.36.17
@@ -145,92 +144,92 @@ docker run --rm -p 8080:8080 \
   fermdez96/k8dash:1.36.17
 ```
 
-### Variables de entorno
+### Environment variables
 
-#### Generales
+#### General
 
-| Variable      | Por defecto | Descripción                                            |
-|---------------|-------------|--------------------------------------------------------|
-| `KUBECONFIG`  | —           | Ruta(s) al kubeconfig. Admite varias separadas por `:` (Linux). |
-| `K8DASH_ADDR` | `:8080`     | Dirección y puerto de escucha del servidor HTTP.       |
-| `K8DASH_NAMESPACE` | *(autodetectado)* | Namespace donde persistir el Secret `k8dash-auth` de la autenticación. In-cluster se detecta del ServiceAccount. |
-| `K8DASH_AUTH_DISABLED` | `false` | Si es `true`/`1`, **desactiva la autenticación** ignorando la configuración persistida. Mecanismo de recuperación si el admin queda bloqueado. |
+| Variable      | Default | Description                                            |
+|---------------|---------|--------------------------------------------------------|
+| `KUBECONFIG`  | —       | Path(s) to the kubeconfig. Supports several separated by `:` (Linux). |
+| `K8DASH_ADDR` | `:8080` | Listen address and port of the HTTP server.            |
+| `K8DASH_NAMESPACE` | *(auto-detected)* | Namespace where the authentication Secret `k8dash-auth` is persisted. In-cluster it is detected from the ServiceAccount. |
+| `K8DASH_AUTH_DISABLED` | `false` | If `true`/`1`, **disables authentication**, ignoring the persisted configuration. Recovery mechanism if the admin gets locked out. |
 
-#### Seguridad (CORS, cabeceras, CSRF y sesión)
+#### Security (CORS, headers, CSRF and session)
 
-| Variable | Por defecto | Descripción |
-|----------|-------------|-------------|
-| `K8DASH_CORS_ORIGINS` | `*` | Orígenes permitidos (`Access-Control-Allow-Origin`). Acepta `*` o una lista separada por comas. **En producción, restríngelo a tu dominio.** |
-| `K8DASH_CORS_METHODS` | `GET, POST, PUT, DELETE, OPTIONS` | Métodos permitidos (`Access-Control-Allow-Methods`). |
-| `K8DASH_CORS_HEADERS` | `Content-Type, Authorization` | Cabeceras permitidas (`Access-Control-Allow-Headers`). |
-| `K8DASH_CORS_CREDENTIALS` | `false` | Añade `Access-Control-Allow-Credentials: true` (requiere lista explícita de orígenes). |
-| `K8DASH_CORS_MAX_AGE` | — | Segundos de caché del *preflight*. |
-| `K8DASH_CSP` | *(política estricta)* | `Content-Security-Policy`. `off` para desactivarla. |
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `K8DASH_CORS_ORIGINS` | `*` | Allowed origins (`Access-Control-Allow-Origin`). Accepts `*` or a comma-separated list. **Restrict it to your domain in production.** |
+| `K8DASH_CORS_METHODS` | `GET, POST, PUT, DELETE, OPTIONS` | Allowed methods (`Access-Control-Allow-Methods`). |
+| `K8DASH_CORS_HEADERS` | `Content-Type, Authorization` | Allowed headers (`Access-Control-Allow-Headers`). |
+| `K8DASH_CORS_CREDENTIALS` | `false` | Adds `Access-Control-Allow-Credentials: true` (requires an explicit origin list). |
+| `K8DASH_CORS_MAX_AGE` | — | Preflight cache duration in seconds. |
+| `K8DASH_CSP` | *(strict policy)* | `Content-Security-Policy`. Use `off` to disable it. |
 | `K8DASH_FRAME_OPTIONS` | `DENY` | `X-Frame-Options` (anti-clickjacking). |
-| `K8DASH_HSTS` | `max-age=31536000; includeSubDomains` | `Strict-Transport-Security` (solo se emite bajo HTTPS). |
+| `K8DASH_HSTS` | `max-age=31536000; includeSubDomains` | `Strict-Transport-Security` (only sent over HTTPS). |
 | `K8DASH_REFERRER_POLICY` | `same-origin` | `Referrer-Policy`. |
-| `K8DASH_PERMISSIONS_POLICY` | *(cámara/micro/geo off)* | `Permissions-Policy`. |
-| `K8DASH_TRUSTED_PROXIES` | *(loopback + redes privadas)* | Redes cuyas cabeceras `X-Forwarded-*` se aceptan. Admite `all`, `none` o una lista de CIDR/IP. |
-| `K8DASH_CSRF` | `auto` | Protección anti-CSRF: `auto` (solo navegadores), `on` (siempre) u `off`. |
-| `K8DASH_SESSION_TTL` | `12h` | Duración de la sesión con renovación automática. `0` = sin expiración. |
-| `K8DASH_SETUP_TOKEN` | — | Si se define, la primera configuración de la autenticación exige este token. |
-| `K8DASH_OIDC_ALLOW_INSECURE_ISSUER` | `false` | Permite un *issuer* OIDC sin TLS. No recomendado. |
-| `K8DASH_OIDC_SKIP_SIGNATURE_VERIFY` | `false` | Desactiva la verificación de la firma del `id_token`. No recomendado. |
+| `K8DASH_PERMISSIONS_POLICY` | *(camera/mic/geo off)* | `Permissions-Policy`. |
+| `K8DASH_TRUSTED_PROXIES` | *(loopback + private ranges)* | Networks whose `X-Forwarded-*` headers are trusted. Accepts `all`, `none` or a CIDR/IP list. |
+| `K8DASH_CSRF` | `auto` | Anti-CSRF protection: `auto` (browsers only), `on` (always) or `off`. |
+| `K8DASH_SESSION_TTL` | `12h` | Session lifetime with automatic renewal. `0` = never expires. |
+| `K8DASH_SETUP_TOKEN` | — | If set, the initial authentication setup requires this token. |
+| `K8DASH_OIDC_ALLOW_INSECURE_ISSUER` | `false` | Allows a non-TLS OIDC issuer. Not recommended. |
+| `K8DASH_OIDC_SKIP_SIGNATURE_VERIFY` | `false` | Disables `id_token` signature verification. Not recommended. |
 
-> `X-Content-Type-Options: nosniff` se envía siempre. Los valores por defecto reproducen el
-> comportamiento de versiones anteriores donde ello no supone un riesgo directo, de modo que
-> una instalación existente **sigue funcionando igual tras actualizar**.
+> `X-Content-Type-Options: nosniff` is always sent. Defaults reproduce the behaviour of
+> previous versions wherever that does not imply a direct risk, so an **existing
+> installation keeps working the same after upgrading**.
 
-**Ejemplo recomendado para producción tras un Ingress con TLS:**
+**Recommended setup for production behind a TLS Ingress:**
 
 ```bash
 K8DASH_CORS_ORIGINS="https://dashboard.example.com"
-K8DASH_TRUSTED_PROXIES="10.42.0.0/16"   # la red de tu Ingress
+K8DASH_TRUSTED_PROXIES="10.42.0.0/16"   # your Ingress network
 K8DASH_CSRF=on
 K8DASH_SESSION_TTL=8h
 ```
 
-📘 Documentación detallada en
-**[Seguridad](https://k8dash.fermdez.net/docs/es/seguridad)** y
-**[Configuración](https://k8dash.fermdez.net/docs/es/configuracion)**
-· *EN: [Security](https://k8dash.fermdez.net/docs/en/security) ·
-[Configuration](https://k8dash.fermdez.net/docs/en/configuration)*.
+📘 Full documentation in
+**[Security](https://k8dash.fermdez.net/docs/en/security)** and
+**[Configuration](https://k8dash.fermdez.net/docs/en/configuration)**
+· *ES: [Seguridad](https://k8dash.fermdez.net/docs/es/seguridad) ·
+[Configuración](https://k8dash.fermdez.net/docs/es/configuracion)*.
 
 ---
 
-## 🔨 Reconstruir la imagen desde este repositorio
+## 🔨 Rebuild the image from this repository
 
-Este repositorio incluye un [`Dockerfile`](Dockerfile) que construye la imagen a partir
-del **binario precompilado** que se distribuye junto a él, sin necesidad de tener el
-código fuente. Se publican tres binarios: `k8dash` (genérico), `k8dash-amd64` y
-`k8dash-arm64`.
+This repository includes a [`Dockerfile`](Dockerfile) that builds the image from the
+**precompiled binary** shipped alongside it, without needing the source code. Three
+binaries are published: `k8dash` (generic), `k8dash-amd64` and `k8dash-arm64`.
 
 ```bash
 git clone https://github.com/FerMdez/K8Dash.git
 cd K8Dash
 
-# Imagen con el binario genérico
+# Image with the generic binary
 docker build -t k8dash:local .
 
-# O para una arquitectura concreta (selecciona el binario correspondiente)
+# Or for a specific architecture (selects the matching binary)
 docker build --build-arg BIN=k8dash-amd64 -t k8dash:amd64 .
 docker build --build-arg BIN=k8dash-arm64 -t k8dash:arm64 .
 ```
 
-> La imagen oficial en Docker Hub (`fermdez96/k8dash`) es **multi-arch**
-> (`linux/amd64` + `linux/arm64`): `docker pull` selecciona la arquitectura del host.
+> The official image on Docker Hub (`fermdez96/k8dash`) is **multi-arch**
+> (`linux/amd64` + `linux/arm64`): `docker pull` selects the host's architecture.
 
 ---
 
-## 🔐 Verificar la integridad del binario (checksum)
+## 🔐 Verify the binary integrity (checksum)
 
-Cada release publica un fichero [`SHA256SUMS.txt`](SHA256SUMS.txt) con la suma de
-comprobación **SHA-256** de los tres binarios (`k8dash`, `k8dash-amd64` y
-`k8dash-arm64`). Está disponible tanto en la raíz de este repositorio como entre
-los *assets* de cada [GitHub Release](https://github.com/FerMdez/K8Dash/releases).
-Verificarlo tras la descarga garantiza que el binario **no ha sido alterado**.
+Every release publishes a [`SHA256SUMS.txt`](SHA256SUMS.txt) file with the
+**SHA-256** checksum of the three binaries (`k8dash`, `k8dash-amd64` and
+`k8dash-arm64`). It is available both in the root of this repository and among
+the *assets* of each [GitHub Release](https://github.com/FerMdez/K8Dash/releases).
+Verifying it after download guarantees that the binary **has not been tampered
+with**.
 
-El contenido tiene el formato estándar de `sha256sum` (una línea por binario):
+The content uses the standard `sha256sum` format (one line per binary):
 
 ```text
 <hash>  k8dash
@@ -238,20 +237,20 @@ El contenido tiene el formato estándar de `sha256sum` (una línea por binario):
 <hash>  k8dash-arm64
 ```
 
-Descarga el binario que necesites **y** el fichero `SHA256SUMS.txt` en el mismo
-directorio, y a continuación compara la suma según tu sistema operativo.
+Download the binary you need **and** the `SHA256SUMS.txt` file into the same
+directory, then compare the checksum according to your operating system.
 
 ### 🐧 Linux
 
-`sha256sum` viene incluido en `coreutils`. Verifica todas las sumas del fichero:
+`sha256sum` ships with `coreutils`. Verify all sums in the file:
 
 ```bash
-# Verifica solo las entradas cuyos ficheros estén presentes en el directorio
+# Verify only entries whose files are present in the directory
 sha256sum --ignore-missing -c SHA256SUMS.txt
-# Salida esperada:  k8dash-amd64: OK
+# Expected output:  k8dash-amd64: OK
 ```
 
-O calcula el hash de un binario concreto y compáralo manualmente:
+Or compute the hash of a specific binary and compare it manually:
 
 ```bash
 sha256sum k8dash-amd64
@@ -259,126 +258,127 @@ sha256sum k8dash-amd64
 
 ### 🍏 macOS
 
-macOS no trae `sha256sum`, pero sí `shasum` (con el algoritmo `-a 256`):
+macOS does not ship `sha256sum`, but it does ship `shasum` (with the `-a 256`
+algorithm):
 
 ```bash
-# Verifica contra el fichero de sumas
+# Verify against the sums file
 shasum -a 256 --ignore-missing -c SHA256SUMS.txt
 
-# O calcula el hash de un binario concreto
+# Or compute the hash of a specific binary
 shasum -a 256 k8dash-amd64
 ```
 
-> Alternativamente: `openssl dgst -sha256 k8dash-amd64`.
+> Alternatively: `openssl dgst -sha256 k8dash-amd64`.
 
 ### 🪟 Windows (PowerShell)
 
-Usa el cmdlet `Get-FileHash` y compara el resultado con la línea correspondiente
-de `SHA256SUMS.txt`:
+Use the `Get-FileHash` cmdlet and compare the result with the matching line in
+`SHA256SUMS.txt`:
 
 ```powershell
-# Calcula el SHA-256 del binario
+# Compute the SHA-256 of the binary
 Get-FileHash .\k8dash-amd64 -Algorithm SHA256
 
-# Comparación automática frente al valor esperado del fichero de sumas.
-# Sustituye el nombre del binario según el que hayas descargado:
+# Automatic comparison against the expected value from the sums file.
+# Replace the binary name with the one you downloaded:
 $file = 'k8dash-amd64'
 $expected = (Select-String -Path .\SHA256SUMS.txt -Pattern "\s$file$").Line.Split(' ')[0]
 $actual   = (Get-FileHash .\$file -Algorithm SHA256).Hash.ToLower()
-if ($actual -eq $expected) { "OK: $file coincide" } else { "ERROR: $file NO coincide" }
+if ($actual -eq $expected) { "OK: $file matches" } else { "ERROR: $file does NOT match" }
 ```
 
-Si el resultado no coincide, **no ejecutes el binario**: vuelve a descargarlo.
+If the result does not match, **do not run the binary**: download it again.
 
-📘 Guía ampliada:
-**[Verificar la integridad](https://k8dash.fermdez.net/docs/es/verificar-integridad)**
-· *EN: [Verify integrity](https://k8dash.fermdez.net/docs/en/verify-integrity)*.
+📘 Extended guide:
+**[Verify integrity](https://k8dash.fermdez.net/docs/en/verify-integrity)**
+· *ES: [Verificar integridad](https://k8dash.fermdez.net/docs/es/verificar-integridad)*.
 
 ---
 
-## ☸️ Despliegue dentro del cluster
+## ☸️ Deployment inside the cluster
 
-El manifiesto [`deploy/kubernetes.yaml`](deploy/kubernetes.yaml) crea un `Namespace`,
-`ServiceAccount`, `ClusterRole`/`ClusterRoleBinding` con los permisos mínimos, un
-`Deployment` endurecido (rootless, read-only FS, sin capabilities), un `Service` y un
-`Ingress` de ejemplo.
+The manifest [`deploy/kubernetes.yaml`](deploy/kubernetes.yaml) creates a `Namespace`,
+`ServiceAccount`, `ClusterRole`/`ClusterRoleBinding` with the minimum permissions, a
+hardened `Deployment` (rootless, read-only FS, no capabilities), a `Service` and an example
+`Ingress`.
 
-La imagen que utiliza el manifiesto es `fermdez96/k8dash:latest`.
+The image used by the manifest is `fermdez96/k8dash:latest`.
 
 ```bash
-# 1. Aplica los manifiestos
+# 1. Apply the manifests
 kubectl apply -f deploy/kubernetes.yaml
 
-# 2. Accede mediante port-forward
+# 2. Access it via port-forward
 kubectl -n k8dash port-forward svc/k8dash 8080:80
 ```
 
-Abre el navegador en **http://localhost:8080**.
+Open your browser at **http://localhost:8080**.
 
-Cuando se ejecuta dentro del cluster, K8Dash usa automáticamente el `ServiceAccount`
-montado: **no necesita `KUBECONFIG`**.
+When running inside the cluster, K8Dash automatically uses the mounted `ServiceAccount`:
+**it does not need `KUBECONFIG`**.
 
-### Fijar una versión concreta en el despliegue
+### Pin a specific version in the deployment
 
-El manifiesto usa `fermdez96/k8dash:latest`. Para desplegar una versión concreta, edita
-la línea `image:` del `Deployment` o aplica un *patch*:
+The manifest uses `fermdez96/k8dash:latest`. To deploy a specific version, edit the
+`image:` line of the `Deployment` or apply a *patch*:
 
 ```bash
 kubectl -n k8dash set image deployment/k8dash k8dash=fermdez96/k8dash:1.36.17
 ```
 
-### Exposición con Ingress (opcional)
+### Exposure with Ingress (optional)
 
-El manifiesto incluye un `Ingress` de ejemplo (comentado para el host
-`dashboard.example.com`) preparado para **ingress-nginx** con los timeouts y cabeceras
-necesarios para el streaming de logs/eventos y el terminal interactivo (WebSockets).
-Ajusta el `host`, el `secretName` de TLS y, si usas otro controlador (p. ej. Traefik),
-adapta las anotaciones.
+The manifest includes an example `Ingress` (commented out for the host
+`dashboard.example.com`) prepared for **ingress-nginx** with the timeouts and headers
+required for log/event streaming and the interactive terminal (WebSockets). Adjust the
+`host`, the TLS `secretName` and, if you use another controller (e.g. Traefik), adapt the
+annotations.
 
 > [!IMPORTANT]
-> El streaming de logs/eventos y el terminal interactivo usan WebSockets (rutas `/api/ws/...`). Si el proxy/Ingress no propaga el *Upgrade* o cierra conexiones ociosas, verás en el navegador *"WebSocket connection failed"*.
+> Log/event streaming and the interactive terminal use WebSockets (routes `/api/ws/...`). If the proxy/Ingress does not forward the *Upgrade* or closes idle connections, you will see *"WebSocket connection failed"* in the browser.
 
-📘 Guía completa con ejemplos de Ingress, TLS y cert-manager:
-**[Exposición con Ingress](https://k8dash.fermdez.net/docs/es/exposicion-ingress)**
-· *EN: [Ingress exposure](https://k8dash.fermdez.net/docs/en/ingress-exposure)*.
+📘 Full guide with Ingress, TLS and cert-manager examples:
+**[Ingress exposure](https://k8dash.fermdez.net/docs/en/ingress-exposure)**
+· *ES: [Exposición con Ingress](https://k8dash.fermdez.net/docs/es/exposicion-ingress)*.
 
-🚀 **¿Despliegue en producción?** Sigue la lista de comprobación completa:
-**[Despliegue en producción](https://k8dash.fermdez.net/docs/es/despliegue-produccion)**
-· *EN: [Production deployment](https://k8dash.fermdez.net/docs/en/production-deployment)*.
+🚀 **Going to production?** Follow the complete checklist:
+**[Production deployment](https://k8dash.fermdez.net/docs/en/production-deployment)**
+· *ES: [Despliegue en producción](https://k8dash.fermdez.net/docs/es/despliegue-produccion)*.
 
 ---
 
-## 🔒 Seguridad
+## 🔒 Security
 
-- K8Dash hereda **exactamente los permisos** del kubeconfig o ServiceAccount con el que
-  se ejecuta. Limita el RBAC para entornos sensibles.
-- El manifiesto incluido aplica el **principio de mínimo privilegio** y un contenedor
-  endurecido (no root, FS de solo lectura, sin capabilities).
-- En el **listado** de Secrets solo se muestran metadatos; sus valores solo se exponen
-  bajo demanda al abrir/editar un Secret concreto.
-- Funcionalidades como **port-forward**, **terminal exec** y las acciones de **Helm**
-  (rollback/desinstalación) permiten interactuar directamente con las cargas de trabajo:
-  concédelas solo a operadores de confianza.
-- No expongas el dashboard directamente a Internet sin una capa de autenticación.
+- K8Dash inherits **exactly the permissions** of the kubeconfig or ServiceAccount it runs
+  with. Restrict the RBAC for sensitive environments.
+- The included manifest applies the **principle of least privilege** and a hardened
+  container (non-root, read-only FS, no capabilities).
+- In the Secrets **listing** only metadata is shown; their values are only exposed on
+  demand when opening/editing a specific Secret.
+- Features such as **port-forward**, **terminal exec** and the **Helm** actions
+  (rollback/uninstall) allow you to interact directly with the workloads: grant them only
+  to trusted operators.
+- Do not expose the dashboard directly to the Internet without an authentication layer.
 
-📘 Detalle completo (CORS, cabeceras, proxies de confianza, anti-CSRF, sesiones y
-autenticación OIDC): **[Seguridad](https://k8dash.fermdez.net/docs/es/seguridad)** y
-**[Autenticación](https://k8dash.fermdez.net/docs/es/autenticacion)**
-· *EN: [Security](https://k8dash.fermdez.net/docs/en/security) ·
-[Authentication](https://k8dash.fermdez.net/docs/en/authentication)*.
+📘 Full details (CORS, headers, trusted proxies, anti-CSRF, sessions and OIDC
+authentication): **[Security](https://k8dash.fermdez.net/docs/en/security)** and
+**[Authentication](https://k8dash.fermdez.net/docs/en/authentication)**
+· *ES: [Seguridad](https://k8dash.fermdez.net/docs/es/seguridad) ·
+[Autenticación](https://k8dash.fermdez.net/docs/es/autenticacion)*.
 
-### ✅ Antes de exponerlo: lista de comprobación
+### ✅ Before exposing it: checklist
 
-Todas las recomendaciones de seguridad, exposición, RBAC y versionado están reunidas en una
-única guía paso a paso:
+Every security, exposure, RBAC and versioning recommendation is gathered into a single
+step-by-step guide:
 
-👉 **[🚀 Despliegue en producción](https://k8dash.fermdez.net/docs/es/despliegue-produccion)**
-· *EN: [🚀 Production deployment](https://k8dash.fermdez.net/docs/en/production-deployment)*
+👉 **[🚀 Production deployment](https://k8dash.fermdez.net/docs/en/production-deployment)**
+· *ES: [🚀 Despliegue en producción](https://k8dash.fermdez.net/docs/es/despliegue-produccion)*
 
 ```bash
-# Resumen del endurecimiento recomendado
+# Summary of the recommended hardening
 K8DASH_CORS_ORIGINS="https://dashboard.example.com"
-K8DASH_TRUSTED_PROXIES="10.42.0.0/16"   # la red de tu Ingress
+K8DASH_TRUSTED_PROXIES="10.42.0.0/16"   # your Ingress network
 K8DASH_CSRF=on
 K8DASH_SESSION_TTL=8h
 K8DASH_SETUP_TOKEN="$(openssl rand -hex 24)"
@@ -386,47 +386,47 @@ K8DASH_SETUP_TOKEN="$(openssl rand -hex 24)"
 
 ---
 
-## 🆘 ¿Necesitas ayuda?
+## 🆘 Need help?
 
-| Recurso | Enlace |
-|---------|--------|
-| 🚀 Despliegue en producción | [Español](https://k8dash.fermdez.net/docs/es/despliegue-produccion) · [English](https://k8dash.fermdez.net/docs/en/production-deployment) |
-| 🩺 Solución de problemas | [Español](https://k8dash.fermdez.net/docs/es/solucion-de-problemas) · [English](https://k8dash.fermdez.net/docs/en/troubleshooting) |
-| ❓ Preguntas frecuentes | [Español](https://k8dash.fermdez.net/docs/es/faq) · [English](https://k8dash.fermdez.net/docs/en/faq) |
-| 📚 Documentación completa | [Español](https://k8dash.fermdez.net/docs/es/) · [English](https://k8dash.fermdez.net/docs/en/) |
-| 🐛 Reportar un problema | [GitHub Issues](https://github.com/FerMdez/K8Dash/issues) |
+| Resource | Link |
+|----------|------|
+| 🚀 Production deployment | [English](https://k8dash.fermdez.net/docs/en/production-deployment) · [Español](https://k8dash.fermdez.net/docs/es/despliegue-produccion) |
+| 🩺 Troubleshooting | [English](https://k8dash.fermdez.net/docs/en/troubleshooting) · [Español](https://k8dash.fermdez.net/docs/es/solucion-de-problemas) |
+| ❓ Frequently asked questions | [English](https://k8dash.fermdez.net/docs/en/faq) · [Español](https://k8dash.fermdez.net/docs/es/faq) |
+| 📚 Full documentation | [English](https://k8dash.fermdez.net/docs/en/) · [Español](https://k8dash.fermdez.net/docs/es/) |
+| 🐛 Report an issue | [GitHub Issues](https://github.com/FerMdez/K8Dash/issues) |
 
 ---
 
-## 💖 Apoya el proyecto
+## 💖 Support the project
 
-K8Dash es un proyecto **gratuito** que desarrollo y mantengo en mi tiempo libre. Si te
-resulta útil y quieres ayudar a que siga evolucionando (nuevas funcionalidades, correcciones
-y documentación), puedes hacerlo mediante **GitHub Sponsors**:
+K8Dash is a **free** project that I develop and maintain in my spare time. If you find it
+useful and would like to help it keep evolving (new features, fixes and documentation), you
+can do so through **GitHub Sponsors**:
 
 <p align="center">
   <a href="https://github.com/sponsors/FerMdez">
-    <img src="https://img.shields.io/badge/💖%20Patrocinar%20en%20GitHub-FerMdez-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Patrocinar en GitHub Sponsors">
+    <img src="https://img.shields.io/badge/💖%20Sponsor%20on%20GitHub-FerMdez-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub Sponsors">
   </a>
 </p>
 
-¡Cualquier aportación, por pequeña que sea, es enormemente apreciada! ⭐ Dar una estrella al
-repositorio también ayuda mucho.
+Every contribution, however small, is greatly appreciated! ⭐ Starring the repository also
+helps a lot.
 
 ---
 
 ## 📝 Changelog
 
-Consulta [`CHANGELOG.md`](CHANGELOG.md) para el histórico de cambios de cada versión.
+See [`CHANGELOG.md`](CHANGELOG.md) for the change history of each version.
 
 ---
 
-## 📝 Licencia
+## 📝 License
 
 Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA).
 
 ---
 
-## ©️ Autor
+## ©️ Author
 
 [`Fernando Méndez Torrubiano`](https://fermdez.net/)

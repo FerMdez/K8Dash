@@ -9,6 +9,12 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.59.0] - 2026-11-13
+
+- Alternar a inglés como primer idioma en la descripción de GitHub y DockerHub.
+- Añadida configuración de RBAC crítica de ejemplo, comentada por defecto.
+- Añadidas gráficas de métricas específicas en los detalles en los Deployments, Statefulsets, Daemonsets y Nodos.
+
 ## [1.58.1] - 2026-11-12
 
 - Mejoras visuales en gráficas para ver rendimiento de PODs.

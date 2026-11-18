@@ -137,6 +137,51 @@ rules:
       - clusterroles
       - clusterrolebindings
     verbs: ["delete"]
+  # ---------------------------------------------------------------------------
+  # Desinstalación completa de releases de Helm desde el dashboard.
+  # `helm uninstall` borra TODOS los recursos del release y el Secret con su
+  # historial (sh.helm.release.v1.<release>.vN). Sin estos permisos, la
+  # desinstalación deja recursos huérfanos y avisos "forbidden".
+  #
+  # ⚠️ NO se recomienda conceder estos permisos cuando:
+  #   - El dashboard está expuesto a Internet o a una red no confiable sin
+  #     autenticación activada (cualquiera podría borrar Services, Secrets o
+  #     volúmenes de cualquier namespace).
+  #   - El clúster es compartido o multi-tenant, o hay usuarios del dashboard
+  #     que no deberían poder modificar namespaces ajenos (ClusterRole = alcance
+  #     a TODO el clúster, incluido kube-system).
+  #   - Hay datos persistentes críticos: borrar PersistentVolumes /
+  #     PersistentVolumeClaims puede provocar PÉRDIDA IRREVERSIBLE DE DATOS si
+  #     el reclaimPolicy del volumen es "Delete".
+  #   - El acceso a Secrets se considera sensible (borrar Secrets puede romper
+  #     certificados TLS, credenciales de registro o tokens de otras apps).
+  #   - Entornos de producción con políticas de mínimo privilegio: en ese caso
+  #     es preferible desinstalar con `helm uninstall` desde fuera del clúster
+  #     o limitar estos permisos con Roles/RoleBindings por namespace.
+  # ---------------------------------------------------------------------------
+  # Recursos core con namespace (Services, ConfigMaps, ServiceAccounts, PVCs) y
+  # Secrets (necesario para eliminar el registro del release de Helm).
+  #- apiGroups: [""]
+  #  resources:
+  #    - services
+  #    - configmaps
+  #    - secrets
+  #    - serviceaccounts
+  #    - persistentvolumeclaims
+  #  verbs: ["delete"]
+  # PersistentVolumes (recurso de ámbito de clúster).
+  #- apiGroups: [""]
+  #  resources: ["persistentvolumes"]
+  #  verbs: ["delete"]
+  # Ingress (habitual en charts expuestos por HTTP).
+  #- apiGroups: ["networking.k8s.io"]
+  #  resources: ["ingresses"]
+  #  verbs: ["delete"]
+  # HorizontalPodAutoscalers (Helm necesita leerlos y borrarlos).
+  #- apiGroups: ["autoscaling"]
+  #  resources: ["horizontalpodautoscalers"]
+  #  verbs: ["get", "list", "watch", "delete"]
+  # ---------------------------------------------------------------------------
   # Métricas (metrics-server).
   - apiGroups: ["metrics.k8s.io"]
     resources: ["nodes", "pods"]
