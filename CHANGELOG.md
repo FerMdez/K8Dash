@@ -9,6 +9,10 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.59.1] - 2026-11-19
+
+- Mejora y corrección en funcionalidad para cerrar por completo un terminal interactivo al escribir el comando 'exit'.
+
 ## [1.59.0] - 2026-11-13
 
 - Alternar a inglés como primer idioma en la descripción de GitHub y DockerHub.
