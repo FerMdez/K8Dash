@@ -9,6 +9,21 @@ Cada entrada agrupa los cambios incluidos en una versión (imagen
 `fermdez96/k8dash:<versión>`), enumerando los commits mergeados desde `master`
 hacia la rama de publicación desde la release anterior.
 
+## [1.59.5] - 2026-11-26
+
+- Añadidos iconos nuevos.
+- Mejoras en diseño de detalles de cargas de trabajo.
+
+## [1.59.4] - 2026-11-26
+
+- Añadido icono de etiquetas de imágenes Docker para los contenedores.
+- Mejoras en el detalle de la imagen docker correspondiente a cada InitContainer y Container en los detalles de los PODs.
+
+## [1.59.3] - 2026-11-26
+
+- Mejoras en datalles de cargas de trabajo para ver PV y PVC asociados.
+- Mejoras en datalles de cargas de trabajo para ver Secrets y ConfigMaps asociados.
+
 ## [1.59.2] - 2026-11-24
 
 - Mejora en página de error al entrar en un reenvío de puerto ya cerrado.
